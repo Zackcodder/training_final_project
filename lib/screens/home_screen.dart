@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-       child: Column(
+       child: const Column(
         children: [
           Row(
             children: [
