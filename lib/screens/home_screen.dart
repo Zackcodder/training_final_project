@@ -5,6 +5,26 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+       child: Column(
+        children: [
+          Row(
+            children: [
+              Text('09011223344'),
+              Divider(),
+              Text('Hawau'),
+            Row(
+              children: [
+                Text('MTN ...'),
+                Icon(Icons.arrow_forward_ios)
+              ],
+            )
+            ],
+          )
+        ],
+       ), 
+      ),
+    );
   }
 }
