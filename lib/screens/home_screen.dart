@@ -11,12 +11,11 @@ class HomeScreen extends StatelessWidget {
        body: Column(
           children: [
             const Text( 
-             
-              'Marketplace',
+             'Marketplace',
               style: TextStyle(fontSize: 30),
             ),
             Container(
-              color: Color.fromARGB(255, 49, 48, 41),
+              color: const Color.fromARGB(255, 49, 48, 41),
              margin: const EdgeInsets.fromLTRB(6, 4, 5, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -37,18 +36,23 @@ class HomeScreen extends StatelessWidget {
               children: [
                Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(360),
-                      ),
-                    child: Column(
-                      children: [
-                      Image.asset('images/yelloWin.png', width: 100, height: 100, fit: BoxFit.cover
-                      ),
-                     const Text('YelloWin', style: TextStyle(fontSize: 20, color: Colors.white)),
-                     ]
-                    )
-               )
+                  // this container is for image
+                  GestureDetector(
+                    onTap:(){},
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(360),
+                        ),
+                      child: Column(
+                        children:[
+                           Image.asset('images/yelloWin.png', width: 100, height: 100, fit: BoxFit.cover
+                        ),
+                       const Text('YelloWin', style: TextStyle(fontSize: 20, color: Colors.white)),
+                        
+                       ]
+                      )
+                                   ),
+                  )
                ],
                ),
                   Column(
