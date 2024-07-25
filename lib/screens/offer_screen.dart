@@ -13,7 +13,7 @@ class OfferScreen extends StatelessWidget {
           Text('Mega deal zone (6)'),
           Row(
             children: [
-          Text('View all', style: Textstyle: color: Colors.yellow),
+          Text('View all', style: TextStyle (color: Colors.yellow)),
            Icon(Icons.arrow_forward),
             ]
           )
