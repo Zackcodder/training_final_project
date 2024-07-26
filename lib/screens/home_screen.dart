@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:training_final_project/screens/offers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,14 +11,14 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Container(
           width: 500,
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           height: 320,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 colors: [
                   Color.fromARGB(255, 253, 195, 4),
-                  const Color.fromARGB(255, 240, 224, 82)
+                  Color.fromARGB(255, 240, 224, 82)
                 ],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
@@ -34,8 +33,8 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 5),
                       child: Text(
                         '0806 044 9642',
                         style: TextStyle(fontSize: 20),
@@ -46,13 +45,13 @@ class HomeScreen extends StatelessWidget {
                       width: 2,
                       height: 18,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 5),
                       child: Text('Ayomide', style: TextStyle(fontSize: 20)),
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Text('MTN XtraVa...', style: TextStyle(fontSize: 20)),
                     Icon(Icons.arrow_forward_ios)
@@ -62,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ),
 
             ///Divider
-            Divider(
+            const Divider(
               color: Color.fromARGB(255, 194, 177, 177),
             ),
 
@@ -72,22 +71,23 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(Icons.phone_in_talk_outlined),
                         Text('Airtime Balance', style: TextStyle(fontSize: 25)),
                       ],
                     ),
-                    Text('₦0.00',
+                    const Text('₦0.00',
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold)),
-                    Text('Bonus Airtime : ₦945.89',style: TextStyle(fontSize: 20)),
+                    const Text('Bonus Airtime : ₦945.89',
+                        style: TextStyle(fontSize: 20)),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OffersScreen()));
+                                builder: (context) => const OffersScreen()));
                       },
                       child: Container(
                         height: 40,
@@ -95,13 +95,14 @@ class HomeScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.black,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Icon(Icons.currency_exchange_outlined,
                                 color: Colors.white),
                             Text('Buy Airtime',
-                                style: TextStyle(color: Colors.white, fontSize: 20)),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20)),
                             Icon(Icons.arrow_forward_ios, color: Colors.white),
                           ],
                         ),
@@ -110,33 +111,35 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  color: Color.fromARGB(255, 194, 177, 177),
+                  color: const Color.fromARGB(255, 194, 177, 177),
                   width: 2,
                   height: 200,
                 ),
                 Column(children: [
-                  Row(
+                  const Row(
                     children: [
                       Icon(Icons.compare_arrows),
                       Text('Data Balance', style: TextStyle(fontSize: 25)),
                     ],
                   ),
-                  Text('0MB',
+                  const Text('0MB',
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
                   Padding(
-                     padding: const EdgeInsets.only(top: 20),
+                    padding: const EdgeInsets.only(top: 20),
                     child: Container(
                       height: 40,
                       width: 150,
                       decoration: BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.circular(20)),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Icon(Icons.compare_arrows, color: Colors.white),
-                          Text('Buy Data', style: TextStyle(color: Colors.white, fontSize: 20)),
+                          Text('Buy Data',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20)),
                           Icon(Icons.arrow_forward_ios, color: Colors.white),
                         ],
                       ),
@@ -147,17 +150,23 @@ class HomeScreen extends StatelessWidget {
             ),
 
             ///Divider
-            Divider(
+            const Divider(
               color: Color.fromARGB(255, 194, 177, 177),
             ),
 
             ///Details and Refresh row
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('View Details', style: TextStyle(fontSize: 20),),
+                Text(
+                  'View Details',
+                  style: TextStyle(fontSize: 20),
+                ),
                 Row(
-                  children: [Icon(Icons.refresh), Text('Refresh', style: TextStyle(fontSize: 20))],
+                  children: [
+                    Icon(Icons.refresh),
+                    Text('Refresh', style: TextStyle(fontSize: 20))
+                  ],
                 )
               ],
             )
