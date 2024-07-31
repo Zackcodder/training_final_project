@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
        body: Column(
           children: [
               const Row(
-            mainAxisAlignment: MainAxisAlignment.start, // Aligns the text to the right
+            mainAxisAlignment: MainAxisAlignment.start, // Aligns the text to the left
             children: [
               Padding(
                 padding: EdgeInsets.all(16.0),
