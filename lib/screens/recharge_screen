@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+
+class RechargePage extends StatelessWidget {
+  const RechargePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+title: Text('Recharge'),
+      ),
+      body: Column(
+        children: [
+          ///To myself row
+          CircleAvatar(),
+
+          Column(
+            children: [
+Text('To Myself'),
+Text('0903 233 4244')
+            ],
+          ),
+
+          Container(
+            child: ,
+          )
+
+        ],
+      ),
+    );
+  }
+}
