@@ -11,12 +11,12 @@ class RechargeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
-        title: Text(
+        title: const Text(
           'Recharge',
           style: TextStyle(color: Colors.white),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 46, 45, 45),
+      backgroundColor: const Color.fromARGB(255, 46, 45, 45),
       body: Column(
         children: [
           /// first row
@@ -26,7 +26,7 @@ class RechargeScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                const Row(
                   children: [
                     CircleAvatar(
                         child:
@@ -38,13 +38,13 @@ class RechargeScreen extends StatelessWidget {
                   ],
                 ),
                 Container(
-                   alignment: Alignment.center,
-                   height: 50,
-                   padding: EdgeInsets.only(left: 10, right: 10),
+                  alignment: Alignment.center,
+                  height: 50,
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.yellow),
                       borderRadius: BorderRadius.circular(30)),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text('Buy for others',
@@ -60,8 +60,8 @@ class RechargeScreen extends StatelessWidget {
           ///Row
           Container(
             width: 450,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.only(top: 10, bottom: 10),
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(top: 10, bottom: 10),
             decoration: BoxDecoration(
                 color: Colors.black, borderRadius: BorderRadius.circular(30)),
             child: Row(
@@ -74,8 +74,8 @@ class RechargeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(30)),
-                  margin: EdgeInsets.only(right: 10),
-                  child: Text('Airtime Recharge',
+                  margin: const EdgeInsets.only(right: 10),
+                  child: const Text('Airtime Recharge',
                       style: TextStyle(color: Colors.white)),
                 ),
                 Container(
@@ -85,8 +85,8 @@ class RechargeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(30)),
-                  margin: EdgeInsets.only(left: 10),
-                  child: Text('Voucher Recharge',
+                  margin: const EdgeInsets.only(left: 10),
+                  child: const Text('Voucher Recharge',
                       style: TextStyle(color: Colors.white)),
                 )
               ],
@@ -95,14 +95,14 @@ class RechargeScreen extends StatelessWidget {
 
           ///Column
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             width: 500,
             height: 200,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Column(
+            child: const Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -113,10 +113,11 @@ class RechargeScreen extends StatelessWidget {
                         style: TextStyle(color: Colors.white))
                   ],
                 ),
-                Row(
-                  children: [
-                    Text('N0.00', style: TextStyle(color: Colors.grey,fontSize: 30))
-                  ],
+                //Text('N0.00', style: TextStyle(color: Colors.grey,fontSize: 30))
+                TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: String.fromEnvironment('N0.00'),
+                  hintStyle: TextStyle(color: Color.fromARGB(255, 184, 183, 183))),
                 )
               ],
             ),
