@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:training_final_project/screens/offers_screen.dart';
-import 'package:training_final_project/screens/recharge_screen';
+import 'package:training_final_project/screens/recharge_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -341,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const RechargePage()));
+                                        const RechargeScreen()));
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
