@@ -341,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const RechargeScreen()));
+                                        const Recharge()));
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
