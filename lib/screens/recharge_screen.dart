@@ -4,9 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Recharge extends StatelessWidget {
+class Recharge extends StatefulWidget {
   const Recharge({super.key});
 
+  @override
+  State<Recharge> createState() => _RechargeState();
+}
+
+class _RechargeState extends State<Recharge> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
