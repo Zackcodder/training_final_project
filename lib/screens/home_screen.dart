@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:training_final_project/screens/offers_screen.dart';
+import 'package:training_final_project/screens/offers_screen.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -82,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                Icon(Icons.arrow_forward),
+                                Icon(Icons.chevron_right_outlined),
                               ],
                             ),
                           )
@@ -142,10 +141,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder:(context) => Offerscreen() ,)
-                            // );
+                           // Navigator.push(
+                             //   context,
+                             //   MaterialPageRoute(
+                             //     builder: (context) => Recharge(),
+                             //   ));
                           },
                           child: Container(
                             margin: const EdgeInsets.only(right: 10),
