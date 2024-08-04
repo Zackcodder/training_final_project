@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/offers_screen.dart';
+import 'package:training_final_project/screens/profile_page.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -141,11 +142,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                           // Navigator.push(
-                             //   context,
-                             //   MaterialPageRoute(
-                             //     builder: (context) => Recharge(),
-                             //   ));
+                            Navigator.push(
+                                context,
+                               MaterialPageRoute(
+                                builder: (context) => ProfilePage(),
+                               ));
                           },
                           child: Container(
                             margin: const EdgeInsets.only(right: 10),
