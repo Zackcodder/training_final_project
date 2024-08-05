@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/offers_screen.dart';
-import 'package:training_final_project/screens/recharge_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,14 +9,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(right: 10),
+                            margin: const EdgeInsets.only(right: 10),
                             // width: 100,
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
@@ -141,11 +132,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                           // Navigator.push(
-                             //   context,
-                             //   MaterialPageRoute(
-                             //     builder: (context) => Recharge(),
-                             //   ));
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => Recharge(),
+                            //   ));
                           },
                           child: Container(
                             margin: const EdgeInsets.only(right: 10),
@@ -451,7 +442,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 color: const Color.fromARGB(255, 49, 48, 41),
                 margin: const EdgeInsets.fromLTRB(6, 4, 5, 0),
-                padding: EdgeInsets.fromLTRB(10, 5, 15, 10),
+                padding: const EdgeInsets.fromLTRB(10, 5, 15, 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -714,52 +705,6 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ],
           )
-        ],
-      ),
-      bottomNavigationBar: Container(
-        color: Colors.white.withOpacity(0.2),
-        child: BottomAppBar(
-          color: Colors.black,
-          shape: const CircularNotchedRectangle(),
-          notchMargin: 18.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _buildNavItem(Icons.home, 'Home', 0),
-              _buildNavItem(Icons.play_arrow, 'Play', 1),
-              const SizedBox(width: 40), // Space for the floating action button
-              _buildNavItem(Icons.help_outline, 'Help', 2),
-              _buildNavItem(Icons.more_horiz, 'More', 3),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: SizedBox(
-        height: 100,
-        width: 70,
-        child: FloatingActionButton(
-          backgroundColor: Colors.yellow,
-          shape: const CircleBorder(),
-          onPressed: () {
-            // Action for the FAB
-          },
-          child: const Icon(Icons.add),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildNavItem(IconData icon, String label, int index) {
-    Color color = _selectedIndex == index ? Colors.yellow : Colors.grey;
-    return GestureDetector(
-      onTap: () => _onItemTapped(index),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: color),
-          Text(label, style: TextStyle(color: color)),
         ],
       ),
     );

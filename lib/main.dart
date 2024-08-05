@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/bottom_nav%20bar.dart';
 import 'package:training_final_project/screens/home_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const BottomNavBar(),
     );
   }
 }
