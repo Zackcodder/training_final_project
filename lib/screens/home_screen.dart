@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/morescreen.dart';
 import 'package:training_final_project/screens/offers_screen.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
 
@@ -141,11 +142,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                           // Navigator.push(
-                             //   context,
-                             //   MaterialPageRoute(
-                             //     builder: (context) => Recharge(),
-                             //   ));
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => Recharge(),
+                            //   ));
                           },
                           child: Container(
                             margin: const EdgeInsets.only(right: 10),
@@ -340,8 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const Recharge()));
+                                    builder: (context) => const MoreScreen()));
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -729,7 +729,15 @@ class _HomeScreenState extends State<HomeScreen> {
               _buildNavItem(Icons.play_arrow, 'Play', 1),
               const SizedBox(width: 40), // Space for the floating action button
               _buildNavItem(Icons.help_outline, 'Help', 2),
-              _buildNavItem(Icons.more_horiz, 'More', 3),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MoreScreen()));
+                },
+                child: _buildNavItem(Icons.more_horiz, 'More', 3),
+              )
             ],
           ),
         ),
