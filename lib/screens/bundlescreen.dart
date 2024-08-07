@@ -182,15 +182,27 @@ class _BundlescreenState extends State<Bundlescreen> {
                         'Purchase an active data bundle to be \n able to add as favourite',
                         style: TextStyle(color: Colors.grey),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(
-                            left: 40, right: 40, top: 20, bottom: 20),
-                        decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: const Text(
-                          'Go to categories',
-                          style: TextStyle(color: Colors.black),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _isContent1 = false;
+                            _isContent2 = true;
+                            _isContent3 = false;
+                            _isButton1Clicked = false;
+                            _isButton2Clicked = !_isButton2Clicked;
+                            _isButton3Clicked = false;
+                          });
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                              left: 40, right: 40, top: 20, bottom: 20),
+                          decoration: BoxDecoration(
+                              color: Colors.pink,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: const Text(
+                            'Go to categories',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       )
                     ],
@@ -458,237 +470,476 @@ class _BundlescreenState extends State<Bundlescreen> {
                       ),
                     )
                   : _isContent3
-                      ? Container(
-                          margin: const EdgeInsets.all(10),
-                          child: Column(
-                            children: [
-                              //info
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.info,
-                                      color: Colors.yellow,
-                                    ),
-                                    Text(
-                                        'Your last 2 months data history is shown \nhere.')
-                                  ],
+                      ? Expanded(
+                          child: Container(
+                            margin: const EdgeInsets.all(10),
+                            padding: EdgeInsets.all(10),
+                            child: ListView(
+                              children: [
+                                //info
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.blue,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: const Row(
+                                    children: [
+                                      Icon(
+                                        Icons.info,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(
+                                          'Your last 2 months data history is shown \nhere.')
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              // plan card
-                              Container(
-                                margin: EdgeInsets.only(top: 20),
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color:
-                                        const Color.fromARGB(255, 32, 31, 31)),
-                                child: const Column(
-                                  children: [
-                                    //First row
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'MTN XtraSpecial',
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            ),
-                                            Text(
-                                              'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
-                                              style:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ],
-                                        ),
-                                        Icon(
-                                          Icons.info,
-                                          color: Colors.yellow,
-                                        )
-                                      ],
-                                    ),
-                                    Divider(
-                                      color: Colors.grey,
-                                    ),
-                                    //Second row
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.access_time,
-                                                  color: Colors.grey,
-                                                ),
-                                                Text(
-                                                  'Validity',
-                                                  style: TextStyle(
-                                                      color: Colors.grey),
-                                                )
-                                              ],
-                                            ),
-                                            Text(
-                                              '9999 days',
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            )
-                                          ],
-                                        ),
-                                        //For divider
-                                        // SizedBox(
-                                        //   width: 3,
-                                        //   height: 10,
-                                        // ),
-                                        Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.credit_card,
-                                                  color: Colors.grey,
-                                                ),
-                                                Text(
-                                                  'Price',
-                                                  style: TextStyle(
-                                                      color: Colors.grey),
-                                                )
-                                              ],
-                                            ),
-                                            Text(
-                                              '102',
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            )
-                                          ],
-                                        ),
-                                        Text(
-                                          'Buy now',
-                                          style:
-                                              TextStyle(color: Colors.yellow),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
 
-                              
-                              // plan card
-                              Container(
-                                margin: EdgeInsets.only(top: 20),
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color:
-                                        const Color.fromARGB(255, 32, 31, 31)),
-                                child: const Column(
-                                  children: [
-                                    //First row
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                ///buy again offers
+                                Container(
+                                  margin: EdgeInsets.only(bottom: 20),
+                                  child: Column(
+                                    children: [
+                                      // plan card
+                                      Container(
+                                        margin: EdgeInsets.only(top: 20),
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color.fromARGB(
+                                                255, 32, 31, 31)),
+                                        child: const Column(
                                           children: [
-                                            Text(
-                                              'MTN XtraSpecial',
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            ),
-                                            Text(
-                                              'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
-                                              style:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ],
-                                        ),
-                                        Icon(
-                                          Icons.info,
-                                          color: Colors.yellow,
-                                        )
-                                      ],
-                                    ),
-                                    Divider(
-                                      color: Colors.grey,
-                                    ),
-                                    //Second row
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          children: [
+                                            //First row
                                             Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
-                                                Icon(
-                                                  Icons.access_time,
-                                                  color: Colors.grey,
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'MTN XtraSpecial',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                    Text(
+                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      style: TextStyle(
+                                                          color: Colors.grey),
+                                                    ),
+                                                  ],
                                                 ),
-                                                Text(
-                                                  'Validity',
-                                                  style: TextStyle(
-                                                      color: Colors.grey),
+                                                Icon(
+                                                  Icons.info,
+                                                  color: Colors.yellow,
                                                 )
                                               ],
                                             ),
-                                            Text(
-                                              '9999 days',
-                                              style: TextStyle(
-                                                  color: Colors.white),
+                                            Divider(
+                                              color: Colors.grey,
+                                            ),
+                                            //Second row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.access_time,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Validity',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '9999 days',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                //For divider
+                                                // SizedBox(
+                                                //   width: 3,
+                                                //   height: 10,
+                                                // ),
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.credit_card,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Price',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '102',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Text(
+                                                  'Buy now',
+                                                  style: TextStyle(
+                                                      color: Colors.yellow),
+                                                )
+                                              ],
                                             )
                                           ],
                                         ),
-                                        //For divider
-                                        // SizedBox(
-                                        //   width: 3,
-                                        //   height: 10,
-                                        // ),
-                                        Column(
+                                      ),
+
+                                      Container(
+                                        margin: EdgeInsets.only(top: 20),
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color.fromARGB(
+                                                255, 32, 31, 31)),
+                                        child: const Column(
                                           children: [
+                                            //First row
                                             Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
-                                                Icon(
-                                                  Icons.credit_card,
-                                                  color: Colors.grey,
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'MTN XtraSpecial',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                    Text(
+                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      style: TextStyle(
+                                                          color: Colors.grey),
+                                                    ),
+                                                  ],
                                                 ),
-                                                Text(
-                                                  'Price',
-                                                  style: TextStyle(
-                                                      color: Colors.grey),
+                                                Icon(
+                                                  Icons.info,
+                                                  color: Colors.yellow,
                                                 )
                                               ],
                                             ),
-                                            Text(
-                                              '102',
-                                              style: TextStyle(
-                                                  color: Colors.white),
+                                            Divider(
+                                              color: Colors.grey,
+                                            ),
+                                            //Second row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.access_time,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Validity',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '9999 days',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                //For divider
+                                                // SizedBox(
+                                                //   width: 3,
+                                                //   height: 10,
+                                                // ),
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.credit_card,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Price',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '102',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Text(
+                                                  'Buy now',
+                                                  style: TextStyle(
+                                                      color: Colors.yellow),
+                                                )
+                                              ],
                                             )
                                           ],
                                         ),
-                                        Text(
-                                          'Buy now',
-                                          style:
-                                              TextStyle(color: Colors.yellow),
-                                        )
-                                      ],
-                                    )
-                                  ],
+                                      ),
+
+                                      // plan card
+                                      Container(
+                                        margin: EdgeInsets.only(top: 20),
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color.fromARGB(
+                                                255, 32, 31, 31)),
+                                        child: const Column(
+                                          children: [
+                                            //First row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'MTN XtraSpecial',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                    Text(
+                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      style: TextStyle(
+                                                          color: Colors.grey),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Icon(
+                                                  Icons.info,
+                                                  color: Colors.yellow,
+                                                )
+                                              ],
+                                            ),
+                                            Divider(
+                                              color: Colors.grey,
+                                            ),
+                                            //Second row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.access_time,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Validity',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '9999 days',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                //For divider
+                                                // SizedBox(
+                                                //   width: 3,
+                                                //   height: 10,
+                                                // ),
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.credit_card,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Price',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '102',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Text(
+                                                  'Buy now',
+                                                  style: TextStyle(
+                                                      color: Colors.yellow),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+
+                                      Container(
+                                        margin: EdgeInsets.only(top: 20),
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color.fromARGB(
+                                                255, 32, 31, 31)),
+                                        child: const Column(
+                                          children: [
+                                            //First row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'MTN XtraSpecial',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                    Text(
+                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      style: TextStyle(
+                                                          color: Colors.grey),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Icon(
+                                                  Icons.info,
+                                                  color: Colors.yellow,
+                                                )
+                                              ],
+                                            ),
+                                            Divider(
+                                              color: Colors.grey,
+                                            ),
+                                            //Second row
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.access_time,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Validity',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '9999 days',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                //For divider
+                                                // SizedBox(
+                                                //   width: 3,
+                                                //   height: 10,
+                                                // ),
+                                                Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Icon(
+                                                          Icons.credit_card,
+                                                          color: Colors.grey,
+                                                        ),
+                                                        Text(
+                                                          'Price',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.grey),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Text(
+                                                      '102',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Text(
+                                                  'Buy now',
+                                                  style: TextStyle(
+                                                      color: Colors.yellow),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         )
                       : Container(),

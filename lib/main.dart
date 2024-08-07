@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/bottom_nav%20bar.dart';
+import 'package:training_final_project/screens/bundlescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BottomNavBar(),
+      home: const Bundlescreen(),
     );
   }
 }
