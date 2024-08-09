@@ -23,14 +23,19 @@ class _BundlescreenState extends State<Bundlescreen> {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('Buy bundles'),
+          title: const Text(
+            'Buy bundles',
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.pink,
+          toolbarHeight: 60,
         ),
         body: Column(children: [
           /// first row
           Container(
-            color: Colors.pink,
+            color: const Color.fromARGB(255, 32, 31, 31),
             padding: const EdgeInsets.all(8),
-            height: 60,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -50,7 +55,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                     ),
                     Text(
                       'To Myself \n 0903 445 2344',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ],
                 ),
@@ -61,15 +66,15 @@ class _BundlescreenState extends State<Bundlescreen> {
                   height: 40,
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
+                      border: Border.all(color: Colors.pink),
                       borderRadius: BorderRadius.circular(30)),
                   child: const Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text('Buy for others',
-                          style: TextStyle(color: Colors.white, fontSize: 14)),
-                      Icon(Icons.arrow_forward_ios, color: Colors.yellow),
+                          style: TextStyle(color: Colors.pink, fontSize: 14)),
+                      Icon(Icons.arrow_forward_ios, color: Colors.pink),
                     ],
                   ),
                 ),
@@ -213,18 +218,19 @@ class _BundlescreenState extends State<Bundlescreen> {
                   Container(
                       padding: const EdgeInsets.all(10),
                       margin: const EdgeInsets.all(10),
-                      child: Column(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          //First row
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //First Column
+                          Column(
                             children: [
-                              //Data bundles
                               Container(
-                                margin: EdgeInsets.only(right: 10),
-                                padding: const EdgeInsets.all(25),
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(20),
                                   color: const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
@@ -240,59 +246,13 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-                              //Data and voice bundles
+                              //Int'l calling
                               Container(
-                                padding: const EdgeInsets.all(15),
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.send_to_mobile,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'Data & voice\n bundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              //Social bundles
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.ondemand_video_outlined,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'Social \nbundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          //Second row
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              //int'l calling
-                              Container(
-                                margin: EdgeInsets.only(right: 10),
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(20),
                                   color: const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
@@ -308,59 +268,14 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-                              //SME bundles
-                              Container(
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.message,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'SME bundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              //broadband
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.router,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'Broadband \n(Hynetflex)\n bundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          //Third row
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+
                               //Visitors plan
                               Container(
-                                margin: EdgeInsets.only(right: 10),
-                                padding: const EdgeInsets.all(15),
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(20),
                                   color: const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
@@ -376,11 +291,13 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-                              //Thryve bundles
+                              //Broadband mifi
                               Container(
-                                padding: const EdgeInsets.all(15),
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(20),
                                   color: const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
@@ -390,18 +307,161 @@ class _BundlescreenState extends State<Bundlescreen> {
                                       color: Colors.white,
                                     ),
                                     Text(
-                                      'Thryve\n bundles',
+                                      'Broadband\n(MiFi)\n bundles',
                                       style: TextStyle(color: Colors.white),
                                     )
                                   ],
                                 ),
                               ),
-                              //broadband (fibrenet) bundles
+                            ],
+                          ),
+
+                          //Second column
+                          Column(children: [
+                            //Data & voice
+                            Container(
+                              width: 100,
+                              height: 100,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: const Color.fromARGB(255, 32, 31, 31),
+                              ),
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.send_to_mobile,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Data & voice\n bundles',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //sme
+                            Container(
+                              width: 100,
+                              height: 100,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: const Color.fromARGB(255, 32, 31, 31),
+                              ),
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.message,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'SME bundles',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //Thryve
+                            Container(
+                              width: 100,
+                              height: 100,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: const Color.fromARGB(255, 32, 31, 31),
+                              ),
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.phone_in_talk,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Thryve\n bundles',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //digital
+                            Container(
+                              width: 100,
+                              height: 100,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: const Color.fromARGB(255, 32, 31, 31),
+                              ),
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.phone_in_talk,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Digital \n bundles',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ]),
+
+                          //third column
+                          Column(
+                            children: [
+                              //Social bundles
                               Container(
-                                margin: EdgeInsets.only(left: 10),
-                                padding: const EdgeInsets.all(15),
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                ),
+                                child: const Column(
+                                  children: [
+                                    Icon(
+                                      Icons.ondemand_video_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Social \nbundles',
+                                      style: TextStyle(color: Colors.white),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              //hynetflex
+                              Container(
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                ),
+                                child: const Column(
+                                  children: [
+                                    Icon(
+                                      Icons.router,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Broadband \n(Hynetflex)\n bundles',
+                                      style: TextStyle(color: Colors.white),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              //     //broadband (fibrenet) bundles
+                              Container(
+                                width: 100,
+                                height: 100,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
                                   color: const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
@@ -418,54 +478,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 ),
                               ),
                             ],
-                          ),
-                          //Fourth row
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              //Broadband(MiFi) bundles
-                              Container(
-                                margin: EdgeInsets.only(right: 10),
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.phone_in_talk,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'Broadband\n(MiFi)\n bundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              //Digital bundles
-                              Container(
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
-                                ),
-                                child: const Column(
-                                  children: [
-                                    Icon(
-                                      Icons.phone_in_talk,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      'Digital \n bundles',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                          )
                         ],
                       ),
                     )
@@ -475,9 +488,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                             margin: const EdgeInsets.all(10),
                             padding: EdgeInsets.all(10),
                             child: ListView(
+                              scrollDirection: Axis.vertical,
                               children: [
                                 //info
                                 Container(
+                                  padding: EdgeInsets.all(5),
                                   decoration: BoxDecoration(
                                       color: Colors.blue,
                                       borderRadius: BorderRadius.circular(10)),
@@ -485,10 +500,12 @@ class _BundlescreenState extends State<Bundlescreen> {
                                     children: [
                                       Icon(
                                         Icons.info,
-                                        color: Colors.yellow,
+                                        color: Colors.pink,
                                       ),
                                       Text(
-                                          'Your last 2 months data history is shown \nhere.')
+                                        'Your last 2 months data history is shown \nhere.',
+                                        style: TextStyle(fontSize: 15),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -507,7 +524,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child: const Column(
+                                        child: Column(
                                           children: [
                                             //First row
                                             Row(
@@ -533,7 +550,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 ),
                                                 Icon(
                                                   Icons.info,
-                                                  color: Colors.yellow,
+                                                  color: Colors.pink,
                                                 )
                                               ],
                                             ),
@@ -591,23 +608,30 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '102',
+                                                      '₦102',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
                                                   ],
                                                 ),
-                                                Text(
-                                                  'Buy now',
-                                                  style: TextStyle(
-                                                      color: Colors.yellow),
+                                                Container(
+                                                  padding: EdgeInsets.all(10),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(30),
+                                                    border: Border.all(color: Colors.pink)
+                                                  ),
+                                                  child: Text(
+                                                    'Buy now',
+                                                    style: TextStyle(
+                                                        color: Colors.pink),
+                                                  ),
                                                 )
                                               ],
                                             )
                                           ],
                                         ),
                                       ),
-
+                                      //plan card
                                       Container(
                                         margin: EdgeInsets.only(top: 20),
                                         padding: EdgeInsets.all(10),
@@ -616,7 +640,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child: const Column(
+                                        child:  Column(
                                           children: [
                                             //First row
                                             Row(
@@ -642,7 +666,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 ),
                                                 Icon(
                                                   Icons.info,
-                                                  color: Colors.yellow,
+                                                  color: Colors.pink,
                                                 )
                                               ],
                                             ),
@@ -700,16 +724,23 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '102',
+                                                      '₦102',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
                                                   ],
                                                 ),
-                                                Text(
-                                                  'Buy now',
-                                                  style: TextStyle(
-                                                      color: Colors.yellow),
+                                                Container(
+                                                  padding: EdgeInsets.all(10),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(30),
+                                                    border: Border.all(color: Colors.pink)
+                                                  ),
+                                                  child: Text(
+                                                    'Buy now',
+                                                    style: TextStyle(
+                                                        color: Colors.pink),
+                                                  ),
                                                 )
                                               ],
                                             )
@@ -726,7 +757,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child: const Column(
+                                        child:  Column(
                                           children: [
                                             //First row
                                             Row(
@@ -752,7 +783,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 ),
                                                 Icon(
                                                   Icons.info,
-                                                  color: Colors.yellow,
+                                                  color: Colors.pink,
                                                 )
                                               ],
                                             ),
@@ -810,22 +841,30 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '102',
+                                                      '₦102',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
                                                   ],
                                                 ),
-                                                Text(
-                                                  'Buy now',
-                                                  style: TextStyle(
-                                                      color: Colors.yellow),
+                                                Container(
+                                                  padding: EdgeInsets.all(10),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(30),
+                                                    border: Border.all(color: Colors.pink)
+                                                  ),
+                                                  child: Text(
+                                                    'Buy now',
+                                                    style: TextStyle(
+                                                        color: Colors.pink),
+                                                  ),
                                                 )
                                               ],
                                             )
                                           ],
                                         ),
                                       ),
+                                      //plan card
 
                                       Container(
                                         margin: EdgeInsets.only(top: 20),
@@ -835,7 +874,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child: const Column(
+                                        child:  Column(
                                           children: [
                                             //First row
                                             Row(
@@ -861,7 +900,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 ),
                                                 Icon(
                                                   Icons.info,
-                                                  color: Colors.yellow,
+                                                  color: Colors.pink,
                                                 )
                                               ],
                                             ),
@@ -919,16 +958,23 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '102',
+                                                      '₦102',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
                                                   ],
                                                 ),
-                                                Text(
-                                                  'Buy now',
-                                                  style: TextStyle(
-                                                      color: Colors.yellow),
+                                                Container(
+                                                  padding: EdgeInsets.all(10),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(30),
+                                                    border: Border.all(color: Colors.pink)
+                                                  ),
+                                                  child: Text(
+                                                    'Buy now',
+                                                    style: TextStyle(
+                                                        color: Colors.pink),
+                                                  ),
                                                 )
                                               ],
                                             )
