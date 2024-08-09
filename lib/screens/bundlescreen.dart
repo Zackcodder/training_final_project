@@ -228,6 +228,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -250,6 +251,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -273,6 +275,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -295,6 +298,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -322,6 +326,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                             Container(
                               width: 100,
                               height: 100,
+                              margin: EdgeInsets.only(bottom: 20),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -344,6 +349,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                             Container(
                               width: 100,
                               height: 100,
+                              margin: EdgeInsets.only(bottom: 20),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -366,6 +372,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                             Container(
                               width: 100,
                               height: 100,
+                              margin: EdgeInsets.only(bottom: 20),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -388,6 +395,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                             Container(
                               width: 100,
                               height: 100,
+                              margin: EdgeInsets.only(bottom: 20),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -415,6 +423,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -437,6 +446,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -455,10 +465,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-                              //     //broadband (fibrenet) bundles
+                                  //broadband (fibrenet) bundles
                               Container(
                                 width: 100,
                                 height: 100,
+                                margin: EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -617,9 +628,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 Container(
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(30),
-                                                    border: Border.all(color: Colors.pink)
-                                                  ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      border: Border.all(
+                                                          color: Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -640,7 +653,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child:  Column(
+                                        child: Column(
                                           children: [
                                             //First row
                                             Row(
@@ -733,9 +746,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 Container(
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(30),
-                                                    border: Border.all(color: Colors.pink)
-                                                  ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      border: Border.all(
+                                                          color: Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -757,7 +772,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child:  Column(
+                                        child: Column(
                                           children: [
                                             //First row
                                             Row(
@@ -850,9 +865,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 Container(
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(30),
-                                                    border: Border.all(color: Colors.pink)
-                                                  ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      border: Border.all(
+                                                          color: Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -874,7 +891,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 BorderRadius.circular(20),
                                             color: const Color.fromARGB(
                                                 255, 32, 31, 31)),
-                                        child:  Column(
+                                        child: Column(
                                           children: [
                                             //First row
                                             Row(
@@ -967,9 +984,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                 Container(
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(30),
-                                                    border: Border.all(color: Colors.pink)
-                                                  ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      border: Border.all(
+                                                          color: Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
