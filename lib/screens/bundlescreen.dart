@@ -290,6 +290,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                     Text(
                                       'Visitors plan',
                                       style: TextStyle(color: Colors.white),
+                                    ),
+                                    Text(
+                                      '*For foreigners',
+                                      style: TextStyle(
+                                          color: Colors.pink, fontSize: 10),
                                     )
                                   ],
                                 ),
@@ -465,7 +470,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-                                  //broadband (fibrenet) bundles
+                              //broadband (fibrenet) bundles
                               Container(
                                 width: 100,
                                 height: 100,
