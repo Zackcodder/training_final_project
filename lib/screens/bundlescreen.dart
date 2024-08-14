@@ -21,7 +21,7 @@ class _BundlescreenState extends State<Bundlescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 32, 31, 31),
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: const Text(
             'Buy bundles',

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:training_final_project/screens/borrowscreen.dart';
 import 'package:training_final_project/screens/bundlescreen.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
+import 'package:training_final_project/screens/referscreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -532,18 +535,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Bundlescreen()));
-                                } ,
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Bundlescreen()));
+                                  },
                                   child: Container(
                                     padding: const EdgeInsets.all(8),
                                     margin: const EdgeInsets.only(top: 20),
                                     decoration: BoxDecoration(
                                         color: Colors.black,
-                                        borderRadius: BorderRadius.circular(30)),
+                                        borderRadius:
+                                            BorderRadius.circular(30)),
                                     child: const Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
@@ -621,7 +625,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.pink),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ///offer
@@ -657,35 +661,51 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
 
                   ///borrow
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.piggyBank,
-                        color: Colors.white,
-                        size: 25,
-                      ),
-                      Text(
-                        'Borrow',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Borrowscreen()));
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.piggyBank,
+                          color: Colors.white,
+                          size: 25,
+                        ),
+                        Text(
+                          'Borrow',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        )
+                      ],
+                    ),
                   ),
 
                   ///refer and earn
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.moneyBill1Wave,
-                        color: Colors.white,
-                        size: 25,
-                      ),
-                      Text(
-                        'Refer & earn',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Referscreen()));
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.moneyBill1Wave,
+                          color: Colors.white,
+                          size: 25,
+                        ),
+                        Text(
+                          'Refer & earn',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
