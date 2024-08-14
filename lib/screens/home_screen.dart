@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:training_final_project/screens/prepaid_page.dart';
 import 'package:training_final_project/screens/profile_page.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
+import 'package:training_final_project/screens/share_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -240,10 +241,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                   Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder:(context) => PrepaidPage() ,)
-                                   );
+                                  //  Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(builder:(context) => MtnShare() ,)
+                                  //  );
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 10),
