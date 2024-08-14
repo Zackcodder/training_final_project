@@ -21,7 +21,7 @@ class _BundlescreenState extends State<Bundlescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 32, 31, 31),
         appBar: AppBar(
           title: const Text(
             'Buy bundles',
@@ -59,7 +59,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                     ),
                   ],
                 ),
-
+        
                 ///but for others
                 Container(
                   alignment: Alignment.center,
@@ -81,7 +81,7 @@ class _BundlescreenState extends State<Bundlescreen> {
               ],
             ),
           ),
-
+        
           ///Options
           Container(
             padding: const EdgeInsets.all(10),
@@ -117,7 +117,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                         style: TextStyle(color: Colors.white)),
                   ),
                 ),
-
+        
                 //Categories
                 GestureDetector(
                   onTap: () {
@@ -143,7 +143,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                         style: TextStyle(color: Colors.white)),
                   ),
                 ),
-
+        
                 ///Buy again
                 GestureDetector(
                   onTap: () {
@@ -232,7 +232,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -255,7 +256,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -270,7 +272,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   ],
                                 ),
                               ),
-
+        
                               //Visitors plan
                               Container(
                                 width: 100,
@@ -279,7 +281,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -307,7 +310,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -324,7 +328,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               ),
                             ],
                           ),
-
+        
                           //Second column
                           Column(children: [
                             //Data & voice
@@ -420,7 +424,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                               ),
                             ),
                           ]),
-
+        
                           //third column
                           Column(
                             children: [
@@ -432,7 +436,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -455,7 +460,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -478,7 +484,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 32, 31, 31),
+                                  color:
+                                      const Color.fromARGB(255, 32, 31, 31),
                                 ),
                                 child: const Column(
                                   children: [
@@ -511,7 +518,8 @@ class _BundlescreenState extends State<Bundlescreen> {
                                   padding: EdgeInsets.all(5),
                                   decoration: BoxDecoration(
                                       color: Colors.blue,
-                                      borderRadius: BorderRadius.circular(10)),
+                                      borderRadius:
+                                          BorderRadius.circular(10)),
                                   child: const Row(
                                     children: [
                                       Icon(
@@ -525,7 +533,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                     ],
                                   ),
                                 ),
-
+        
                                 ///buy again offers
                                 Container(
                                   margin: EdgeInsets.only(bottom: 20),
@@ -550,12 +558,14 @@ class _BundlescreenState extends State<Bundlescreen> {
                                               children: [
                                                 Column(
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                   children: [
                                                     Text(
                                                       'MTN XtraSpecial',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     ),
                                                     Text(
                                                       'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
@@ -590,15 +600,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Validity',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '9999 days',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -618,15 +629,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Price',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '₦102',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -634,10 +646,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
+                                                          BorderRadius
+                                                              .circular(30),
                                                       border: Border.all(
-                                                          color: Colors.pink)),
+                                                          color:
+                                                              Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -668,12 +681,14 @@ class _BundlescreenState extends State<Bundlescreen> {
                                               children: [
                                                 Column(
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                   children: [
                                                     Text(
                                                       'MTN XtraSpecial',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     ),
                                                     Text(
                                                       'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
@@ -708,15 +723,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Validity',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '9999 days',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -736,15 +752,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Price',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '₦102',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -752,10 +769,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
+                                                          BorderRadius
+                                                              .circular(30),
                                                       border: Border.all(
-                                                          color: Colors.pink)),
+                                                          color:
+                                                              Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -767,7 +785,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                           ],
                                         ),
                                       ),
-
+        
                                       // plan card
                                       Container(
                                         margin: EdgeInsets.only(top: 20),
@@ -787,12 +805,14 @@ class _BundlescreenState extends State<Bundlescreen> {
                                               children: [
                                                 Column(
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                   children: [
                                                     Text(
                                                       'MTN XtraSpecial',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     ),
                                                     Text(
                                                       'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
@@ -827,15 +847,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Validity',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '9999 days',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -855,15 +876,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Price',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '₦102',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -871,10 +893,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
+                                                          BorderRadius
+                                                              .circular(30),
                                                       border: Border.all(
-                                                          color: Colors.pink)),
+                                                          color:
+                                                              Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
@@ -887,7 +910,7 @@ class _BundlescreenState extends State<Bundlescreen> {
                                         ),
                                       ),
                                       //plan card
-
+        
                                       Container(
                                         margin: EdgeInsets.only(top: 20),
                                         padding: EdgeInsets.all(10),
@@ -906,12 +929,14 @@ class _BundlescreenState extends State<Bundlescreen> {
                                               children: [
                                                 Column(
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                   children: [
                                                     Text(
                                                       'MTN XtraSpecial',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     ),
                                                     Text(
                                                       'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
@@ -946,15 +971,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Validity',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '9999 days',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -974,15 +1000,16 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                         Text(
                                                           'Price',
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.grey),
+                                                              color: Colors
+                                                                  .grey),
                                                         )
                                                       ],
                                                     ),
                                                     Text(
                                                       '₦102',
                                                       style: TextStyle(
-                                                          color: Colors.white),
+                                                          color:
+                                                              Colors.white),
                                                     )
                                                   ],
                                                 ),
@@ -990,10 +1017,11 @@ class _BundlescreenState extends State<Bundlescreen> {
                                                   padding: EdgeInsets.all(10),
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
+                                                          BorderRadius
+                                                              .circular(30),
                                                       border: Border.all(
-                                                          color: Colors.pink)),
+                                                          color:
+                                                              Colors.pink)),
                                                   child: Text(
                                                     'Buy now',
                                                     style: TextStyle(
