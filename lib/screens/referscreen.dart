@@ -7,6 +7,7 @@ class Referscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 200,
         flexibleSpace: Container(
           decoration: BoxDecoration(
               image: DecorationImage(

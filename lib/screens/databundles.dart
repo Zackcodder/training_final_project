@@ -225,12 +225,12 @@ class _DatabundlesState extends State<Databundles> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'MTN XtraSpecial',
+                                              '40MB Daily Plan',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             ),
                                             Text(
-                                              'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                              'Get 40MB Daily plan for ₦50. Valid for 24 hrs',
                                               style:
                                                   TextStyle(color: Colors.grey),
                                             ),
@@ -293,7 +293,7 @@ class _DatabundlesState extends State<Databundles> {
                                               ],
                                             ),
                                             Text(
-                                              '₦102',
+                                              '₦50',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )
@@ -337,12 +337,12 @@ class _DatabundlesState extends State<Databundles> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'MTN XtraSpecial',
+                                              '40MB Daily Plan',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             ),
                                             Text(
-                                              'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                              'Get 40MB Daily plan for ₦50. Valid for 24 hrs',
                                               style:
                                                   TextStyle(color: Colors.grey),
                                             ),
@@ -405,7 +405,7 @@ class _DatabundlesState extends State<Databundles> {
                                               ],
                                             ),
                                             Text(
-                                              '₦102',
+                                              '₦50',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )
@@ -450,12 +450,12 @@ class _DatabundlesState extends State<Databundles> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'MTN XtraSpecial',
+                                              '40MB Daily Plan',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             ),
                                             Text(
-                                              'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                              'Get 40MB Daily plan for ₦50. Valid for 24 hrs',
                                               style:
                                                   TextStyle(color: Colors.grey),
                                             ),
@@ -518,7 +518,7 @@ class _DatabundlesState extends State<Databundles> {
                                               ],
                                             ),
                                             Text(
-                                              '₦102',
+                                              '₦50',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )
@@ -604,12 +604,12 @@ class _DatabundlesState extends State<Databundles> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'MTN XtraSpecial',
+                                                  '600MB Weekly Plan',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 ),
                                                 Text(
-                                                  'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                  '600MB Weekly Plan + FREE 1GB for Youtube\nand 100MB for Youtube Music + 3mins.',
                                                   style: TextStyle(
                                                       color: Colors.grey),
                                                 ),
@@ -672,7 +672,7 @@ class _DatabundlesState extends State<Databundles> {
                                                   ],
                                                 ),
                                                 Text(
-                                                  '₦102',
+                                                  '₦500',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 )
@@ -716,12 +716,12 @@ class _DatabundlesState extends State<Databundles> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'MTN XtraSpecial',
+                                                  '600MB Weekly Plan',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 ),
                                                 Text(
-                                                  'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                  '600MB Weekly Plan + FREE 1GB for Youtube\nand 100MB for Youtube Music + 3mins.',
                                                   style: TextStyle(
                                                       color: Colors.grey),
                                                 ),
@@ -784,7 +784,7 @@ class _DatabundlesState extends State<Databundles> {
                                                   ],
                                                 ),
                                                 Text(
-                                                  '₦102',
+                                                  '₦500',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 )
@@ -829,12 +829,12 @@ class _DatabundlesState extends State<Databundles> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'MTN XtraSpecial',
+                                                  '600MB Weekly Plan',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 ),
                                                 Text(
-                                                  'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                  '600MB Weekly Plan + FREE 1GB for Youtube\nand 100MB for Youtube Music + 3mins.',
                                                   style: TextStyle(
                                                       color: Colors.grey),
                                                 ),
@@ -897,7 +897,7 @@ class _DatabundlesState extends State<Databundles> {
                                                   ],
                                                 ),
                                                 Text(
-                                                  '₦102',
+                                                  '₦500',
                                                   style: TextStyle(
                                                       color: Colors.white),
                                                 )
@@ -985,12 +985,12 @@ class _DatabundlesState extends State<Databundles> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'MTN XtraSpecial',
+                                                      '5GB Xtraspecial',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     ),
                                                     Text(
-                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      'Get 5GB Xtraspecial Plan for N1,500. Valid for\n30 days.',
                                                       style: TextStyle(
                                                           color: Colors.grey),
                                                     ),
@@ -1056,7 +1056,7 @@ class _DatabundlesState extends State<Databundles> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '₦102',
+                                                      '₦1,500',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
@@ -1103,12 +1103,12 @@ class _DatabundlesState extends State<Databundles> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'MTN XtraSpecial',
+                                                      '5GB XtraSpecial',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     ),
                                                     Text(
-                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      'Get 5GB Xtraspecial Plan for N1,500. Valid for\n30 days.',
                                                       style: TextStyle(
                                                           color: Colors.grey),
                                                     ),
@@ -1174,7 +1174,7 @@ class _DatabundlesState extends State<Databundles> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '₦102',
+                                                      '₦1,500',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
@@ -1222,12 +1222,12 @@ class _DatabundlesState extends State<Databundles> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'MTN XtraSpecial',
+                                                      '5GB XtraSpecial',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     ),
                                                     Text(
-                                                      'Flatrate of 15k/sec to Local networks \n in Nigeria & discounted call to seven \n international countries.',
+                                                      'Get 5GB Xtraspecial Plan for N1,500. Valid for\n30 days.',
                                                       style: TextStyle(
                                                           color: Colors.grey),
                                                     ),
@@ -1293,7 +1293,7 @@ class _DatabundlesState extends State<Databundles> {
                                                       ],
                                                     ),
                                                     Text(
-                                                      '₦102',
+                                                      '₦1,500',
                                                       style: TextStyle(
                                                           color: Colors.white),
                                                     )
