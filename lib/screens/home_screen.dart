@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:training_final_project/screens/mega_deal_screen.dart';
 import 'package:training_final_project/screens/prepaid_page.dart';
 import 'package:training_final_project/screens/profile_page.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
@@ -241,10 +242,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  //  Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(builder:(context) => MtnShare() ,)
-                                  //  );
+                                   Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder:(context) => MegaDealScreen() ,)
+                                   );
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 10),
