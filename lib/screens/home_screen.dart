@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:training_final_project/screens/borrowscreen.dart';
-import 'package:training_final_project/screens/bundlescreen.dart';
+import 'package:training_final_project/screens/borrow%20screen.dart';
+import 'package:training_final_project/screens/mega_deal_screen.dart';
+import 'package:training_final_project/screens/offerscreen.dart';
 import 'package:training_final_project/screens/recharge_screen.dart';
-import 'package:training_final_project/screens/referscreen.dart';
+import 'package:training_final_project/screens/refer_and_earn_screen.dart';
+import 'package:training_final_project/screens/view_plan_details.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -240,47 +242,49 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              GestureDetector(
-                                onTap: () {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(builder:(context) => Offerscreen() ,)
-                                  // );
-                                },
-                                child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
-                                  padding: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.pink),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      const CircleAvatar(
-                                        radius: 30,
-                                        backgroundImage:
-                                            AssetImage('assets/hotdeal1.png'),
-                                      ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      const Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Recharge offer',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                          Text(
-                                              'Get 50% bonus when you \nrecharge with your debit card '),
-                                        ],
-                                      ),
-                                      Container(
+                              Container(
+                                margin: const EdgeInsets.only(right: 10),
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.pink),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const CircleAvatar(
+                                      radius: 30,
+                                      backgroundImage:
+                                          AssetImage('assets/hotdeal1.png'),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'Recharge offer',
+                                          style:
+                                              TextStyle(color: Colors.white),
+                                        ),
+                                        Text(
+                                            'Get 50% bonus when you \nrecharge with your debit card '),
+                                      ],
+                                    ),
+                                    GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const Offerscreen(),
+                                  ));
+                            },
+                                      child: Container(
                                         margin: const EdgeInsets.only(left: 20),
                                         height: 40,
                                         width: 80,
@@ -296,8 +300,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                               fontSize: 14),
                                         )),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
 
@@ -328,20 +332,30 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             'Get 50% bonus when you \nrecharge with your debit card'),
                                       ],
                                     ),
-                                    Container(
-                                      margin: const EdgeInsets.only(left: 20),
-                                      height: 40,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          color: Colors.black),
-                                      child: const Center(
-                                          child: Text(
-                                        'View',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
-                                      )),
+                                    GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const MegaDealScreen(),
+                                  ));
+                            },
+                                      child: Container(
+                                        margin: const EdgeInsets.only(left: 20),
+                                        height: 40,
+                                        width: 80,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            color: Colors.black),
+                                        child: const Center(
+                                            child: Text(
+                                          'View',
+                                          style: TextStyle(
+                                              color: Colors.white, fontSize: 14),
+                                        )),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -579,18 +593,28 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
 
                       ///Details and Refresh row
-                      const Row(
+                      Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'View Details',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ViewPlanDetails(),
+                                  ));
+                            },
+                            child: const Text(
+                              'View Details',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                          Row(
+                          const Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Icon(Icons.refresh),
@@ -629,23 +653,32 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ///offer
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.gifts,
-                        color: Colors.white,
-                        size: 25,
-                      ),
-                      Text(
-                        'Offers',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Offerscreen(),
+                          ));
+                    },
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.gifts,
+                          color: Colors.white,
+                          size: 25,
+                        ),
+                        Text(
+                          'Offers',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        )
+                      ],
+                    ),
                   ),
 
                   ///share
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
@@ -666,9 +699,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Borrowscreen()));
+                            builder: (context) => const BorrowScreen(),
+                          ));
                     },
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
@@ -690,9 +724,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Referscreen()));
+                            builder: (context) => const ReferAndEarnScreen(),
+                          ));
                     },
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
