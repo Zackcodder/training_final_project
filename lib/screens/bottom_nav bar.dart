@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/helpscreen.dart';
 import 'package:training_final_project/screens/home_screen.dart';
 import 'package:training_final_project/screens/more_screen.dart';
 import 'package:training_final_project/screens/offerscreen.dart';
@@ -17,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const Recharge(),
-    const Offerscreen(),
+    const Helpscreen(),
     const MoreScreen(),
   ];
 
