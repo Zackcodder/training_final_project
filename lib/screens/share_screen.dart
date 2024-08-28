@@ -1,402 +1,189 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MtnShare extends StatelessWidget {
-  const MtnShare({super.key});
+class ShareScreen extends StatelessWidget {
+  const ShareScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[700],
+      backgroundColor: Colors.grey,
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        centerTitle: true,
+        title: const Text(
+          'VDT Share',
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
+      ),
       body: Container(
-        child: Column(
+        padding:
+            const EdgeInsets.only(top: 30, right: 20, left: 20, bottom: 30),
+        margin: const EdgeInsets.only(top: 30),
+        height: double.maxFinite,
+        decoration: const BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: ListView(
           children: [
-// first set mtn share
+            const Text(
+              'Sharing is caring',
+              style: TextStyle(color: Colors.white, fontSize: 18),
+            ),
+            const Text(
+              'Show you friends you care',
+              style: TextStyle(color: Colors.white),
+            ),
+
+            ///date share container
             Container(
-              margin: EdgeInsets.all(15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              margin: const EdgeInsets.only(top: 30),
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.pink,
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  //icon
-                  IconButton(
-                    icon: Icon(Icons.chevron_left),
-                    color: Colors.white,
-                    onPressed: () {},
+                  Icon(
+                    FontAwesomeIcons.phoneFlip,
+                    color: Colors.black,
                   ),
-// text mtn share
-                  Text('Mtn Share' ,style: TextStyle(color: Colors.white),),
-//icon
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white, width: 2),
-                      color: Colors.black,
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        color: Colors.yellow,
-                        Icons.quick_contacts_dialer,
-                        size: 18,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Date Share',
+                        style: TextStyle(color: Colors.white),
                       ),
-                    ),
-                  ),
+                      Text(
+                        '* You can only share a max of 5GB \n date per transaction per day',
+                        style: TextStyle(color: Colors.white),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
-// second set sharing is caring
-            Expanded(
-              child: Container(
-decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25))),
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              
-                child: Column(
-                  children: [
-// sharing is caring
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Sharing is caring',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Show your friends you care.',
-                          style: TextStyle(color: Colors.grey[700]),
-                        ),
-                      ],
-                    ),
-// data share
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 10,
+
+            ///airtime sharing container
+            Container(
+              margin: const EdgeInsets.only(top: 30),
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.pink,
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(
+                    FontAwesomeIcons.phoneFlip,
+                    color: Colors.black,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Airtime Share',
+                        style: TextStyle(color: Colors.white),
                       ),
-                      padding: EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            child: Container(
-                              width: 25,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                border:
-                                    Border.all(color: Colors.black, width: 2),
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.wifi,
-                                  size: 15,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Data Share',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('*'),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      'you can only share a maximum of 5GB',
-                                      style: TextStyle(fontSize: 13),
-                                    )
-                                  ],
-                                ),
-                                Container(
-                                    margin: EdgeInsets.only(left: 10),
-                                    child: Text(
-                                      'data per transaction per day.',
-                                      style: TextStyle(fontSize: 13),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
+                      Text(
+                        '* Max 50,000 per day',
+                        style: TextStyle(color: Colors.white),
                       ),
-                    ),
-// airtime share
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
-                      padding: EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            child: Container(
-                              width: 25,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                border:
-                                    Border.all(color: Colors.black, width: 2),
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.electric_bolt,
-                                  size: 15,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Airtime Share',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('*'),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      'Max. #50,000 per day',
-                                      style: TextStyle(fontSize: 13),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('*'),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      'Min. #50 max.#5,000 per transaction',
-                                      style: TextStyle(fontSize: 13),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-// Sme datashare
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
-                      padding: EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            child: Container(
-                              width: 25,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                border:
-                                    Border.all(color: Colors.black, width: 2),
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.location_city,
-                                  size: 15,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'SME Datashare',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('*'),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      'Mtn SME DataShare is a prepaid',
-                                      style: TextStyle(fontSize: 13),
-                                    )
-                                  ],
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'service that allow business owners',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'to buy data bundles and share with',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'their staff.This service is specifically',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'designed for growing businesses',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'offering them the ability to centrally',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'manage internet usage per staff across',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    'their business',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-// divider
-                    Container(
-                      margin: EdgeInsets.only(top: 5, bottom: 5),
-                      child: Divider(
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
-                    ),
-// by sharing you agree*******
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'By sharing you agree to the terms and conditions',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'of sharing data and airtime',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-// create pin
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Colors.grey[800],
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            child: Container(
-                              width: 18,
-                              height: 27,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.question_mark,
-                                  size: 10,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            'Create PIN',
-                            style: TextStyle(color: Colors.white, fontSize: 13),
-                          ),
-                          SizedBox(
-                            width: 210,
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.chevron_right),
-                            color: Colors.white,
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                      Text(
+                        '* Min.50, Max.5,000 per transaction',
+                        style: TextStyle(color: Colors.white),
+                      )
+                    ],
+                  )
+                ],
               ),
             ),
+
+            ///SME data share container
+            Container(
+              margin: const EdgeInsets.only(top: 30, bottom: 30),
+              padding: const EdgeInsets.only(top: 10, bottom: 10),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.pink,
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(
+                    FontAwesomeIcons.city,
+                    color: Colors.black,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'SME DataShare',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Text(
+                        textAlign: TextAlign.justify,
+                        '* VDT Sme DataShare is a prepaid \nservice that allows business owner \nto buy data bundle and share with \nthier staff. This service is specifically \ndesigned for drowing businesses \n offering them the ability to centrally \nmanage internet usegae per staff accross \nthier businesses',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            ///divider line
+            const Divider(
+              color: Colors.grey,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+
+            ///aggreement text
+            const Text(
+              'By sharing, you agree to the terms and conditions \n of share data and airtime',
+              style: TextStyle(color: Colors.white),
+            ),
+
+            ///create pin container
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.all(10),
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Colors.pink.withOpacity(0.7),
+                  borderRadius: BorderRadius.circular(10)),
+              child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(FontAwesomeIcons.rocketchat, color: Colors.white,),
+                      SizedBox(width: 20,),
+                      Text('Create Pin', style: TextStyle(color: Colors.white),),
+                    ],
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,color: Colors.white,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MegaDealScreen extends StatefulWidget {
+class MegaDealScreen extends StatelessWidget {
   const MegaDealScreen({super.key});
 
-  @override
-  State<MegaDealScreen> createState() => _MegaDealScreenState();
-}
-
-class _MegaDealScreenState extends State<MegaDealScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +10,11 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
       appBar: AppBar(
         backgroundColor: Colors.grey[700],
         leading: IconButton(
-          icon: Icon(Icons.chevron_left),
+          icon: const Icon(Icons.chevron_left),
           color: Colors.white,
           onPressed: () {},
         ),
-        title: Text(
+        title: const Text(
           'Mega deal zone',
           style: TextStyle(color: Colors.white),
         ),
@@ -40,22 +35,22 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           )
         ],
         centerTitle: true,
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         child: Column(
           children: [
-//GEt 24gb container
+            //GEt 24gb container
             Container(
               decoration: BoxDecoration(
                   color: Colors.lightBlue,
                   borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.all(11),
+              padding: const EdgeInsets.all(11),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -63,23 +58,23 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'Data4ME',
                             style: TextStyle(color: Colors.white),
                           )),
-                      Text(
+                      const Text(
                         'Get 24GB + 25',
                         style: TextStyle(color: Colors.white),
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'voice mins for ...',
                             style: TextStyle(color: Colors.white),
                           )),
                       Container(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(30)),
@@ -94,23 +89,23 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   Image.asset(
-                    'images/red.png',
+                    'assets/egg.png',
                     height: 90,
                   ),
                 ],
               ),
             ),
-// GET 15GB contaner
+            // GET 15GB contaner
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
                   color: Colors.red[200],
                   borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.all(11),
+              padding: const EdgeInsets.all(11),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -118,23 +113,23 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'Data4ME',
                             style: TextStyle(color: Colors.white),
                           )),
-                      Text(
+                      const Text(
                         'Get 15GB + 20',
                         style: TextStyle(color: Colors.white),
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'voice mins for ...',
                             style: TextStyle(color: Colors.white),
                           )),
                       Container(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(30)),
@@ -149,7 +144,7 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   Image.asset(
@@ -159,13 +154,13 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                 ],
               ),
             ),
-// Comboforme get 40Gb
+            // Comboforme get 40Gb
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
                   color: Colors.lightGreen[800],
                   borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.all(11),
+              padding: const EdgeInsets.all(11),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -173,23 +168,23 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'Combo4ME',
                             style: TextStyle(color: Colors.white),
                           )),
-                      Text(
+                      const Text(
                         'Get 40GB and',
                         style: TextStyle(color: Colors.white),
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             '350 voice mins ..',
                             style: TextStyle(color: Colors.white),
                           )),
                       Container(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(30)),
@@ -204,7 +199,7 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   Image.asset(
@@ -214,13 +209,13 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                 ],
               ),
             ),
-//comboforu get25gb
+            //comboforu get25gb
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
                   color: Colors.lightBlue[300],
                   borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.all(11),
+              padding: const EdgeInsets.all(11),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -228,23 +223,23 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             'Combo4ME',
                             style: TextStyle(color: Colors.white),
                           )),
-                      Text(
+                      const Text(
                         'Get 25GB and',
                         style: TextStyle(color: Colors.white),
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 6),
-                          child: Text(
+                          margin: const EdgeInsets.only(bottom: 6),
+                          child: const Text(
                             '250 voice mins ..',
                             style: TextStyle(color: Colors.white),
                           )),
                       Container(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(30)),
@@ -259,7 +254,7 @@ class _MegaDealScreenState extends State<MegaDealScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   Image.asset(
