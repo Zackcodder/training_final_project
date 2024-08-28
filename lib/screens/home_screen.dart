@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:training_final_project/screens/mega_deal_screen.dart';
 import 'package:training_final_project/screens/prepaid_page.dart';
 import 'package:training_final_project/screens/profile_page.dart';
@@ -686,76 +686,76 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
 
             ///gallery
-            Container(
-              height: 150,
-              margin: const EdgeInsets.only(
-                  left: 10, right: 10, top: 15, bottom: 15),
-              child: CarouselSlider(
-                options: CarouselOptions(
-                  height: 150,
-                  aspectRatio: 16 / 9,
-                  viewportFraction: 0.8,
-                  initialPage: 0,
-                  enableInfiniteScroll: true,
-                  reverse: false,
-                  autoPlay: true,
-                  autoPlayInterval: const Duration(seconds: 3),
-                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeCenterPage: true,
-                  scrollDirection: Axis.horizontal,
-                ),
-                items: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink.withOpacity(0.7),
-                        image: const DecorationImage(
-                            image: AssetImage('assets/vdtlogo.png'))),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink.withOpacity(0.7),
-                        image: const DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/slide1.png'))),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink,
-                        image: const DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/slide2.png'))),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink,
-                        image: const DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/slide3.png'))),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink,
-                        image: const DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/slide4.png'))),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink,
-                        image: const DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/slide5.png'))),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   height: 150,
+            //   margin: const EdgeInsets.only(
+            //       left: 10, right: 10, top: 15, bottom: 15),
+            //   child: CarouselSlider(
+            //     options: CarouselOptions(
+            //       height: 150,
+            //       aspectRatio: 16 / 9,
+            //       viewportFraction: 0.8,
+            //       initialPage: 0,
+            //       enableInfiniteScroll: true,
+            //       reverse: false,
+            //       autoPlay: true,
+            //       autoPlayInterval: const Duration(seconds: 3),
+            //       autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            //       autoPlayCurve: Curves.fastOutSlowIn,
+            //       enlargeCenterPage: true,
+            //       scrollDirection: Axis.horizontal,
+            //     ),
+            //     items: [
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink.withOpacity(0.7),
+            //             image: const DecorationImage(
+            //                 image: AssetImage('assets/vdtlogo.png'))),
+            //       ),
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink.withOpacity(0.7),
+            //             image: const DecorationImage(
+            //                 fit: BoxFit.fill,
+            //                 image: AssetImage('assets/slide1.png'))),
+            //       ),
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink,
+            //             image: const DecorationImage(
+            //                 fit: BoxFit.fill,
+            //                 image: AssetImage('assets/slide2.png'))),
+            //       ),
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink,
+            //             image: const DecorationImage(
+            //                 fit: BoxFit.fill,
+            //                 image: AssetImage('assets/slide3.png'))),
+            //       ),
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink,
+            //             image: const DecorationImage(
+            //                 fit: BoxFit.fill,
+            //                 image: AssetImage('assets/slide4.png'))),
+            //       ),
+            //       Container(
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: Colors.pink,
+            //             image: const DecorationImage(
+            //                 fit: BoxFit.fill,
+            //                 image: AssetImage('assets/slide5.png'))),
+            //       ),
+            //     ],
+            //   ),
+            // ),
 
             ///market place
             const Padding(
