@@ -1,5 +1,8 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
+import "package:training_final_project/screens/manageNumbersPage.dart";
+import "package:training_final_project/screens/manageSubpage.dart";
+import "package:training_final_project/screens/usageHistoryPage.dart";
 
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key});
@@ -85,12 +88,10 @@ class _MoreScreenState extends State<MoreScreen> {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    //usage history
+//usage history
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
@@ -109,17 +110,23 @@ class _MoreScreenState extends State<MoreScreen> {
                               ),
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Usagehistorypage()),
+                              );
+                            },
                           )
                         ],
                       ),
                     ),
                     //manage subscription
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -139,17 +146,23 @@ class _MoreScreenState extends State<MoreScreen> {
                               ),
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Managesubpage()),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
                     //transaction history
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -169,17 +182,17 @@ class _MoreScreenState extends State<MoreScreen> {
                               ),
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
                     //manage numbers
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -199,17 +212,23 @@ class _MoreScreenState extends State<MoreScreen> {
                               ),
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Managenumberspage()),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
                     // theme & appearance
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -229,10 +248,11 @@ class _MoreScreenState extends State<MoreScreen> {
                               )
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
@@ -274,8 +294,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     ),
                     // sim upgrade
                     Container(
-                      margin: const EdgeInsets.only(bottom: 8, top: 8),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -295,10 +314,11 @@ class _MoreScreenState extends State<MoreScreen> {
                               ),
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
@@ -324,8 +344,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     ),
                     // share airtime/data
                     Container(
-                      margin: const EdgeInsets.all(5),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -345,17 +364,17 @@ class _MoreScreenState extends State<MoreScreen> {
                               )
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
                     // borrow data & airtime
                     Container(
-                      margin: const EdgeInsets.all(5),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -375,10 +394,11 @@ class _MoreScreenState extends State<MoreScreen> {
                               )
                             ],
                           ),
-                          Icon(
-                            Icons.chevron_right_rounded,
+                          IconButton(
+                            icon: Icon(Icons.chevron_right),
                             color: Colors.grey,
-                          )
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
