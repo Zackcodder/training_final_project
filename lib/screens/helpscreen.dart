@@ -9,7 +9,7 @@ class Helpscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 46, 45, 45),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(20),
@@ -19,7 +19,7 @@ class Helpscreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.chat_bubble),
+                    Icon(Icons.chat_bubble,color: Colors.pink,),
                     Text(
                       'Hey Hawau,',
                       style: TextStyle(color: Colors.white, fontSize: 20),
@@ -38,6 +38,7 @@ class Helpscreen extends StatelessWidget {
             ),
           ),
           Container(
+            height: MediaQuery.of(context).size.height,
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
