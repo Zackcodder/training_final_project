@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:training_final_project/screens/more_screen.dart';
 
 class Managenumberspage extends StatelessWidget {
   const Managenumberspage({super.key});
@@ -7,14 +6,6 @@ class Managenumberspage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-        backgroundColor: Colors.amber,
-        foregroundColor: Colors.black,
-        shape: CircleBorder(),
-        mini: true,
-      ),
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         backgroundColor: Colors.grey[700],
@@ -22,10 +13,7 @@ class Managenumberspage extends StatelessWidget {
           icon: const Icon(Icons.chevron_left),
           color: Colors.white,
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MoreScreen()),
-            );
+            Navigator.pop(context);
           },
         ),
         title: const Text(
@@ -133,6 +121,14 @@ class Managenumberspage extends StatelessWidget {
           ],
         ),
       ),
-    );
+    
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.amber,
+        foregroundColor: Colors.black,
+        shape: CircleBorder(),
+        mini: true,
+      ),);
   }
 }

@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
-import 'package:training_final_project/screens/mega_deal_screen.dart';
-import 'package:training_final_project/screens/offerscreen.dart';
-import 'package:training_final_project/screens/prepaid_page.dart';
-import 'package:training_final_project/screens/profile_page.dart';
-import 'package:training_final_project/screens/recharge_screen.dart';
-import 'package:training_final_project/screens/refer_and_earn_screen.dart';
-import 'package:training_final_project/screens/share_screen.dart';
-import 'package:training_final_project/screens/view_plan_details.dart';
+import 'package:training_final_project/screens/date_subs/recharge_screen.dart';
+import 'package:training_final_project/screens/date_subs/share_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

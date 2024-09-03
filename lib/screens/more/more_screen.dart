@@ -1,8 +1,9 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
-import "package:training_final_project/screens/manageNumbersPage.dart";
-import "package:training_final_project/screens/manageSubpage.dart";
-import "package:training_final_project/screens/usageHistoryPage.dart";
+import "package:training_final_project/screens/help/transaction_history_screen.dart";
+import "package:training_final_project/screens/more/manageNumbersPage.dart";
+import "package:training_final_project/screens/more/manageSubpage.dart";
+import "package:training_final_project/screens/more/usageHistoryPage.dart";
 
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key});
@@ -89,11 +90,19 @@ class _MoreScreenState extends State<MoreScreen> {
                       ),
                     ),
 //usage history
-                    Container(
+                    GestureDetector(
+                      onTap: () {
+                        
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Usagehistorypage()),
+                              );
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 Icons.av_timer_rounded,
@@ -111,13 +120,13 @@ class _MoreScreenState extends State<MoreScreen> {
                             ],
                           ),
                           IconButton(
-                            icon: Icon(Icons.chevron_right),
+                            icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Usagehistorypage()),
+                                    builder: (context) => const Usagehistorypage()),
                               );
                             },
                           )
@@ -125,105 +134,141 @@ class _MoreScreenState extends State<MoreScreen> {
                       ),
                     ),
                     //manage subscription
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.play_circle_outline,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                'Manage subscriptions',
-                                style: TextStyle(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Managesubpage()),
+                        );
+                      },
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Row(
+                              children: [
+                                Icon(
+                                  Icons.play_circle_outline,
                                   color: Colors.white,
                                 ),
-                              ),
-                            ],
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.chevron_right),
-                            color: Colors.grey,
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Managesubpage()),
-                              );
-                            },
-                          ),
-                        ],
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  'Manage subscriptions',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.chevron_right),
+                              color: Colors.grey,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Managesubpage()),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     //transaction history
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.av_timer_rounded,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                'Transaction history',
-                                style: TextStyle(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const TransactionsHistoriesScreen()),
+                        );
+                      },
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Row(
+                              children: [
+                                Icon(
+                                  Icons.av_timer_rounded,
                                   color: Colors.white,
                                 ),
-                              ),
-                            ],
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.chevron_right),
-                            color: Colors.grey,
-                            onPressed: () {},
-                          ),
-                        ],
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  'Transaction history',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.chevron_right),
+                              color: Colors.grey,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TransactionsHistoriesScreen()),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     //manage numbers
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.save_as_outlined,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                'Manage numbers',
-                                style: TextStyle(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Managenumberspage()),
+                        );
+                      },
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Row(
+                              children: [
+                                Icon(
+                                  Icons.save_as_outlined,
                                   color: Colors.white,
                                 ),
-                              ),
-                            ],
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.chevron_right),
-                            color: Colors.grey,
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Managenumberspage()),
-                              );
-                            },
-                          ),
-                        ],
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  'Manage numbers',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.chevron_right),
+                              color: Colors.grey,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Managenumberspage()),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     // theme & appearance
@@ -231,7 +276,7 @@ class _MoreScreenState extends State<MoreScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 FontAwesomeIcons.fill,
@@ -249,7 +294,7 @@ class _MoreScreenState extends State<MoreScreen> {
                             ],
                           ),
                           IconButton(
-                            icon: Icon(Icons.chevron_right),
+                            icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
                             onPressed: () {},
                           ),
@@ -297,7 +342,7 @@ class _MoreScreenState extends State<MoreScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 Icons.sim_card_outlined,
@@ -315,7 +360,7 @@ class _MoreScreenState extends State<MoreScreen> {
                             ],
                           ),
                           IconButton(
-                            icon: Icon(Icons.chevron_right),
+                            icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
                             onPressed: () {},
                           ),
@@ -347,7 +392,7 @@ class _MoreScreenState extends State<MoreScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 Icons.exit_to_app_rounded,
@@ -365,7 +410,7 @@ class _MoreScreenState extends State<MoreScreen> {
                             ],
                           ),
                           IconButton(
-                            icon: Icon(Icons.chevron_right),
+                            icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
                             onPressed: () {},
                           ),
@@ -377,7 +422,7 @@ class _MoreScreenState extends State<MoreScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 Icons.subdirectory_arrow_left_rounded,
@@ -395,7 +440,7 @@ class _MoreScreenState extends State<MoreScreen> {
                             ],
                           ),
                           IconButton(
-                            icon: Icon(Icons.chevron_right),
+                            icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
                             onPressed: () {},
                           ),
@@ -522,12 +567,12 @@ class _MoreScreenState extends State<MoreScreen> {
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: Column(
                         children: [
-                          Image.asset(
-                            'assets/mtnlogo.png',
-                            color: Colors.white,
-                            width: 100,
-                            height: 100,
-                          ),
+                          // Image.asset(
+                          //   'assets/mtnlogo.png',
+                          //   color: Colors.white,
+                          //   width: 100,
+                          //   height: 100,
+                          // ),
                           const Text('Version 1.15.1',
                               style: TextStyle(color: Colors.white)),
                           const Text(
@@ -548,11 +593,11 @@ class _MoreScreenState extends State<MoreScreen> {
                             child: Row(
                               children: [
                                 //for mtn logo
-                                Image.asset(
-                                  'assets/mtnlogo.png',
-                                  width: 60,
-                                  height: 60,
-                                ),
+                                // Image.asset(
+                                //   'assets/mtnlogo.png',
+                                //   width: 60,
+                                //   height: 60,
+                                // ),
                                 const Column(
                                   children: [
                                     Text('Loving MTN App?',
