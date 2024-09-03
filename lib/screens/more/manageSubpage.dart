@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:training_final_project/screens/more_screen.dart';
 
 class Managesubpage extends StatelessWidget {
   const Managesubpage({super.key});
@@ -14,10 +13,7 @@ class Managesubpage extends StatelessWidget {
           icon: const Icon(Icons.chevron_left),
           color: Colors.white,
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const MoreScreen()),
-            );
+            Navigator.pop(context);
           },
         ),
         title: const Text(
@@ -71,16 +67,16 @@ class Managesubpage extends StatelessWidget {
             ),
 //5gb xtraspecial role
             Container(
-              margin: EdgeInsets.only(bottom: 20),
+              margin: const EdgeInsets.only(bottom: 20),
               decoration: BoxDecoration(color: Colors.grey[700]),
               padding:
-                  EdgeInsets.only(left: 28, right: 28, top: 10, bottom: 10),
+                  const EdgeInsets.only(left: 28, right: 28, top: 10, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
 // mtn container
                   Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         left: 10, right: 10, top: 20, bottom: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
@@ -106,7 +102,7 @@ class Managesubpage extends StatelessWidget {
                   ),
 
 // 5gb xtraspecial
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -119,11 +115,10 @@ class Managesubpage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 100),
 
 //chevron icon
                   IconButton(
-                    icon: Icon(Icons.chevron_right),
+                    icon: const Icon(Icons.chevron_right),
                     color: Colors.black,
                     onPressed: () {},
                   ),
@@ -133,7 +128,7 @@ class Managesubpage extends StatelessWidget {
 // quick action
             Container(
               margin: const EdgeInsets.only(left: 28, right: 28, top: 15),
-              child: Row(
+              child: const Row(
                 children: [
                   Text(
                     'Quick actions',
@@ -150,7 +145,7 @@ class Managesubpage extends StatelessWidget {
 //buy bundle
                   Column(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.gas_meter_outlined,
                         color: Colors.white,
                       ),
@@ -160,13 +155,13 @@ class Managesubpage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 40,
                   ),
 //home
                   Column(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.home,
                         color: Colors.white,
                       ),
@@ -182,7 +177,7 @@ class Managesubpage extends StatelessWidget {
 // last role
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(right: 20),
+                margin: const EdgeInsets.only(right: 20),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,

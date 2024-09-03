@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:training_final_project/screens/more_screen.dart';
 
 class Usagehistorypage extends StatelessWidget {
   const Usagehistorypage({super.key});
@@ -14,10 +13,7 @@ class Usagehistorypage extends StatelessWidget {
           icon: const Icon(Icons.chevron_left),
           color: Colors.white,
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MoreScreen()),
-            );
+            Navigator.pop(context);
           },
         ),
         title: const Text(
