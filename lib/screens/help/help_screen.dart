@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/help/contact_screen.dart';
 import 'package:training_final_project/screens/help/faqscreen.dart';
 import 'package:training_final_project/screens/help/tips_screen.dart';
 import 'package:training_final_project/screens/help/track_complaint_screen.dart';
@@ -194,31 +195,39 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //contact us
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone_in_talk_outlined,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Contact us',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'Get in touch with us',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                   onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ContactScreen()));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.phone_in_talk_outlined,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Contact us',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'Get in touch with us',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //foundation
