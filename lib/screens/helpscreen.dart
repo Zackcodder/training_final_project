@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/help/faqscreen.dart';
 import 'package:training_final_project/screens/tipsscreen.dart';
 import 'package:training_final_project/screens/transactionscreen.dart';
 
@@ -19,7 +20,10 @@ class Helpscreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.chat_bubble,color: Colors.pink,),
+                    Icon(
+                      Icons.chat_bubble,
+                      color: Colors.pink,
+                    ),
                     Text(
                       'Hey Hawau,',
                       style: TextStyle(color: Colors.white, fontSize: 20),
@@ -120,31 +124,37 @@ class Helpscreen extends StatelessWidget {
                   ),
                 ),
                 //FAQs
-                Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.question_answer,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Frequently asked Questions',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'Get quick answers to all your questions',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Faqscreen()));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.question_answer,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Frequently asked Questions',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'Get quick answers to all your questions',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //track complaint
