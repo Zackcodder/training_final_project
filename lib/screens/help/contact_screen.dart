@@ -30,7 +30,9 @@ class ContactScreen extends StatelessWidget {
               )
             ],
           ),
-          Image.asset('assets/images.googlemap.jpg')
+          Image.asset('assets/images/googlemap.jpg',
+          height: 150,
+          width: MediaQuery.of(context).size.width, fit: BoxFit.cover,)
         ],
       ),
     );
