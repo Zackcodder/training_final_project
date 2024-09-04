@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:training_final_project/screens/help/faqscreen.dart';
 import 'package:training_final_project/screens/help/tips_screen.dart';
+import 'package:training_final_project/screens/help/track_complaint_screen.dart';
 import 'package:training_final_project/screens/help/transaction_history_screen.dart';
 
 class HelpScreen extends StatelessWidget {
@@ -120,59 +122,75 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //FAQs
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.question_answer,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Frequently asked Questions',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'Get quick answers to all your questions',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Faqscreen()));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.question_answer,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Frequently asked Questions',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'Get quick answers to all your questions',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //track complaint
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.pending_actions_rounded,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Track Complaint',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'Know the status of your complaint',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TrackComplaintScreen()));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.pending_actions_rounded,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Track Complaint',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'Know the status of your complaint',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //contact us
