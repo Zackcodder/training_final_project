@@ -420,6 +420,9 @@ class _TransactionsHistoriesScreenState extends State<TransactionsHistoriesScree
                   ],
                 ),
             )
+          
+          
+           
             : _isContent2
                 ?
                 //Subscriptions
@@ -692,6 +695,10 @@ class _TransactionsHistoriesScreenState extends State<TransactionsHistoriesScree
                       ],
                     ),
                 )
+                
+                
+                
+                
                 : Container()
       ]),
     );
