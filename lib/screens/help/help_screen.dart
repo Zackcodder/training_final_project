@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/help/contact_screen.dart';
 import 'package:training_final_project/screens/help/faqscreen.dart';
+import 'package:training_final_project/screens/help/feedback_screen.dart';
 import 'package:training_final_project/screens/help/tips_screen.dart';
 import 'package:training_final_project/screens/help/track_complaint_screen.dart';
 import 'package:training_final_project/screens/help/transaction_history_screen.dart';
@@ -259,31 +260,39 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //feedback
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.thumb_up_sharp,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Feedback',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'Share your feedback and help us serve you better',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                   onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FeedbackScreen()));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.thumb_up_sharp,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Feedback',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'Share your feedback and help us serve you better',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
