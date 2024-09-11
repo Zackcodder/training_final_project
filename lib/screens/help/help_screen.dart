@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/help/contact_screen.dart';
 import 'package:training_final_project/screens/help/faqscreen.dart';
-import 'package:training_final_project/screens/help/feedback_screen.dart';
+import 'package:training_final_project/screens/help/feedback_page.dart';
 import 'package:training_final_project/screens/help/tips_screen.dart';
 import 'package:training_final_project/screens/help/track_complaint_screen.dart';
 import 'package:training_final_project/screens/help/transaction_history_screen.dart';
@@ -265,7 +265,7 @@ class HelpScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FeedbackScreen()));
+                            builder: (context) => const FeedbackPage()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 10),
