@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:training_final_project/screens/help/help_screen.dart';
 
 class FeedbackPage extends StatefulWidget {
   const FeedbackPage({Key? key}) : super(key: key);
@@ -244,15 +245,23 @@ class _FeedbackPageState extends State<FeedbackPage>
                         ),
                       ],
                     ),
-                    Container(
-                      padding: EdgeInsets.only(
-                          left: 50, right: 50, top: 20, bottom: 20),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.pink),
-                      child: Text(
-                        'Submit',
-                        style: TextStyle(fontSize: 20),
+                    GestureDetector(
+                      onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HelpScreen()));
+                  },
+                      child: Container(
+                        padding: EdgeInsets.only(
+                            left: 50, right: 50, top: 20, bottom: 20),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.pink),
+                        child: Text(
+                          'Submit',
+                          style: TextStyle(fontSize: 20),
+                        ),
                       ),
                     )
                   ],
