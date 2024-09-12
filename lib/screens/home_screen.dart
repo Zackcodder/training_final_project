@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:training_final_project/screens/bundlescreen.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 import 'package:training_final_project/screens/date_subs/recharge_screen.dart';
 import 'package:training_final_project/screens/date_subs/share_screen.dart';
@@ -530,30 +532,40 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     color: Colors.white,
                                   ),
                                 ),
-                                Container(
-                                  padding: const EdgeInsets.all(8),
-                                  margin: const EdgeInsets.only(top: 20),
-                                  decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(30)),
-                                  child: const Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Icon(Icons.compare_arrows,
-                                          color: Colors.white),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Buy Data',
-                                        style: TextStyle(
-                                          color: Colors.white,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Bundlescreen()));
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.all(8),
+                                    margin: const EdgeInsets.only(top: 20),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius:
+                                            BorderRadius.circular(30)),
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Icon(Icons.compare_arrows,
+                                            color: Colors.white),
+                                        SizedBox(
+                                          width: 10,
                                         ),
-                                      ),
-                                      Icon(Icons.arrow_forward_ios,
-                                          color: Colors.white),
-                                    ],
+                                        Text(
+                                          'Buy Data',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        Icon(Icons.arrow_forward_ios,
+                                            color: Colors.white),
+                                      ],
+                                    ),
                                   ),
                                 )
                               ]),
