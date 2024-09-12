@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:training_final_project/screens/help/contact_screen.dart';
 import 'package:training_final_project/screens/help/faqscreen.dart';
-import 'package:training_final_project/screens/help/feedback_page.dart';
-import 'package:training_final_project/screens/help/tips_screen.dart';
-import 'package:training_final_project/screens/help/track_complaint_screen.dart';
-import 'package:training_final_project/screens/help/transaction_history_screen.dart';
+import 'package:training_final_project/screens/tipsscreen.dart';
+import 'package:training_final_project/screens/transactionscreen.dart';
 
-class HelpScreen extends StatelessWidget {
-  const HelpScreen({super.key});
+class Helpscreen extends StatelessWidget {
+  const Helpscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +12,18 @@ class HelpScreen extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 46, 45, 45),
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(20),
+          Padding(
+            padding: const EdgeInsets.all(20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.chat_bubble,color: Colors.pink,),
+                    Icon(
+                      Icons.chat_bubble,
+                      color: Colors.pink,
+                    ),
                     Text(
                       'Hey Hawau,',
                       style: TextStyle(color: Colors.white, fontSize: 20),
@@ -43,8 +43,8 @@ class HelpScreen extends StatelessWidget {
           ),
           Container(
             height: MediaQuery.of(context).size.height,
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20)),
@@ -57,9 +57,9 @@ class HelpScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const TipsScreen()));
+                            builder: (context) => const Tipsscreen()));
                   },
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
@@ -93,9 +93,9 @@ class HelpScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const TransactionsHistoriesScreen()));
+                            builder: (context) => const Transactionscreen()));
                   },
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
@@ -126,12 +126,10 @@ class HelpScreen extends StatelessWidget {
                 //FAQs
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Faqscreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Faqscreen()));
                   },
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
@@ -160,79 +158,63 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //track complaint
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TrackComplaintScreen()));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.pending_actions_rounded,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Track Complaint',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Know the status of your complaint',
-                              style: TextStyle(color: Colors.grey),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.pending_actions_rounded,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Track Complaint',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            'Know the status of your complaint',
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
                 //contact us
-                GestureDetector(
-                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ContactScreen()));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.phone_in_talk_outlined,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Contact us',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Get in touch with us',
-                              style: TextStyle(color: Colors.grey),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone_in_talk_outlined,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Contact us',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            'Get in touch with us',
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
                 //foundation
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 10),
                   child: Row(
                     children: [
@@ -260,39 +242,31 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //feedback
-                GestureDetector(
-                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FeedbackPage()));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.thumb_up_sharp,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Feedback',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Share your feedback and help us serve you better',
-                              style: TextStyle(color: Colors.grey),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.thumb_up_sharp,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Feedback',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            'Share your feedback and help us serve you better',
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
               ],
