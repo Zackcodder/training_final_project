@@ -55,37 +55,44 @@ class _FeedbackPageState extends State<FeedbackPage>
       body: Container(
         color: Colors.black,
         child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  ' 1/ 4',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                  ),
-                ),
-                Text(
-                  "I'll do it later",
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20.0),
+          children: [ 
             AnimatedBuilder(
               animation: _animationController,
               builder: (context, child) {
                 return LinearProgressIndicator(
-                  value: _animationController.value * (_currentStep - 1) / 4,
+                  value: _animationController.value * (_currentStep - 1) /4,
                   backgroundColor: Colors.grey.shade700,
                   valueColor: const AlwaysStoppedAnimation<Color>(Colors.pink),
                 );
               },
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  _currentStep == 1
+                      ? ' 1/ 4'
+                      : _currentStep == 2
+                          ? '2/4'
+                          : _currentStep == 3
+                              ? ' 3/ 4'
+                              : ' 4/ 4',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
+                ),
+                _currentStep < 4
+                  ?Text(
+                  "I'll do it later",
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
+                ):SizedBox(),
+              ],
+            ),
+           
             const SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -238,11 +245,15 @@ class _FeedbackPageState extends State<FeedbackPage>
                       ],
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 20),
+                      padding: EdgeInsets.only(
+                          left: 50, right: 50, top: 20, bottom: 20),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.pink),
-                      child: Text('Submit', style: TextStyle(fontSize: 20),),
+                      child: Text(
+                        'Submit',
+                        style: TextStyle(fontSize: 20),
+                      ),
                     )
                   ],
                 ],
@@ -283,25 +294,27 @@ class _FeedbackPageState extends State<FeedbackPage>
           ),
 
           const SizedBox(height: 20.0),
-          ElevatedButton(
-            onPressed: _nextStep,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              textStyle: const TextStyle(color: Colors.black),
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-            ),
-            child: const Text(
-              'Next',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 16.0,
-              ),
-            ),
-          ),
+          _currentStep < 4
+              ? ElevatedButton(
+                  onPressed: _nextStep,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    textStyle: const TextStyle(color: Colors.black),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40.0, vertical: 15.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                )
+              : SizedBox(),
         ],
       ),
     );
