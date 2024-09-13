@@ -12,7 +12,8 @@ class FeedbackPage extends StatefulWidget {
 class _FeedbackPageState extends State<FeedbackPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
-  int _currentStep = 1;
+  int _currentStep = 0;
+  int _feelsStep = 0;
 
   @override
   void initState() {
@@ -38,6 +39,38 @@ class _FeedbackPageState extends State<FeedbackPage>
     });
   }
 
+  // Mapping slider values to corresponding emojis, colors, and texts
+  final List<String> _emojis = [
+    "assets/gif/awful.gif", // Example paths for emoji gifs
+    "assets/gif/fair.gif",
+    "assets/gif/average.gif",
+    "assets/gif/good.gif",
+    "assets/gif/great.gif"
+  ];
+
+  final List<String> _texts = [
+    "I'm feeling awful",
+    "I'm feeling sad",
+    "I'm feeling okay",
+    "I'm feeling good",
+    "I'm feeling great"
+  ];
+
+  final List<Color> _backgroundColors = [
+    const Color.fromARGB(255, 177, 94, 94),
+    const Color.fromARGB(255, 250, 137, 137),
+    const Color.fromARGB(255, 194, 192, 60),
+    Colors.lightGreen,
+    Colors.green,
+  ];
+
+  final List<String> _feelings = ["POOR", "FAIR", "AVERAGE", "GOOD", "GREAT"];
+
+  void _updateFeedback(double value) {
+    setState(() {
+      _feelsStep = value.toInt();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,13 +88,13 @@ class _FeedbackPageState extends State<FeedbackPage>
       ),
       body: Container(
         color: Colors.black,
-        child: Column(
-          children: [ 
+        child: ListView(
+          children: [
             AnimatedBuilder(
               animation: _animationController,
               builder: (context, child) {
                 return LinearProgressIndicator(
-                  value: _animationController.value * (_currentStep - 1) /4,
+                  value: _animationController.value * (_currentStep) / 4,
                   backgroundColor: Colors.grey.shade700,
                   valueColor: const AlwaysStoppedAnimation<Color>(Colors.pink),
                 );
@@ -71,11 +104,11 @@ class _FeedbackPageState extends State<FeedbackPage>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  _currentStep == 1
+                  _currentStep == 0
                       ? ' 1/ 4'
-                      : _currentStep == 2
+                      : _currentStep == 1
                           ? '2/4'
-                          : _currentStep == 3
+                          : _currentStep == 2
                               ? ' 3/ 4'
                               : ' 4/ 4',
                   style: const TextStyle(
@@ -84,22 +117,22 @@ class _FeedbackPageState extends State<FeedbackPage>
                   ),
                 ),
                 _currentStep < 4
-                  ?Text(
-                  "I'll do it later",
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                  ),
-                ):SizedBox(),
+                    ? const Text(
+                        "I'll do it later",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                        ),
+                      )
+                    : const SizedBox(),
               ],
             ),
-           
             const SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: [
-                  if (_currentStep == 1) ...[
+                  if (_currentStep == 0) ...[
                     const SizedBox(height: 10.0),
                     const Text(
                       "Let's begin",
@@ -126,7 +159,7 @@ class _FeedbackPageState extends State<FeedbackPage>
                     ),
                     const SizedBox(height: 20.0),
                     _buildFeedbackCard(),
-                  ] else if (_currentStep == 2) ...[
+                  ] else if (_currentStep == 1) ...[
                     // Step 2 content
                     // ...
                     const SizedBox(height: 10.0),
@@ -155,7 +188,7 @@ class _FeedbackPageState extends State<FeedbackPage>
                     ),
                     const SizedBox(height: 20.0),
                     _buildFeedbackCard(),
-                  ] else if (_currentStep == 3) ...[
+                  ] else if (_currentStep == 2) ...[
                     // Step 3 content
                     // ...
                     const SizedBox(height: 10.0),
@@ -184,7 +217,7 @@ class _FeedbackPageState extends State<FeedbackPage>
                     ),
                     const SizedBox(height: 20.0),
                     _buildFeedbackCard(),
-                  ] else if (_currentStep == 4) ...[
+                  ] else if (_currentStep == 3) ...[
                     // Step 4 content
                     // ...
                     const SizedBox(height: 10.0),
@@ -214,13 +247,13 @@ class _FeedbackPageState extends State<FeedbackPage>
                     const SizedBox(height: 20.0),
                     _buildFeedbackCard(),
                     const SizedBox(height: 20.0),
-                    Text(
+                    const Text(
                       'Additional feedback (optional)',
                       style: TextStyle(color: Colors.white),
                     ),
                     const SizedBox(height: 20.0),
                     Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -230,16 +263,16 @@ class _FeedbackPageState extends State<FeedbackPage>
                     Row(
                       children: [
                         Container(
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(color: Colors.grey)),
-                            child: Icon(
+                            child: const Icon(
                               Icons.attach_file,
                               color: Colors.grey,
                             )),
                         const SizedBox(width: 10.0),
-                        Text(
+                        const Text(
                           'Add Attachment',
                           style: TextStyle(color: Colors.white),
                         ),
@@ -247,18 +280,18 @@ class _FeedbackPageState extends State<FeedbackPage>
                     ),
                     GestureDetector(
                       onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HelpScreen()));
-                  },
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HelpScreen()));
+                      },
                       child: Container(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             left: 50, right: 50, top: 20, bottom: 20),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.pink),
-                        child: Text(
+                        child: const Text(
                           'Submit',
                           style: TextStyle(fontSize: 20),
                         ),
@@ -276,54 +309,86 @@ class _FeedbackPageState extends State<FeedbackPage>
 
   Widget _buildFeedbackCard() {
     return Container(
+      height: 200,
       width: double.infinity,
-      padding: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
-        color: Colors.green,
+        color: _backgroundColors[_feelsStep],
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Column(
+      child: Stack(
+        alignment: Alignment.topCenter,
         children: [
-          const SizedBox(height: 10.0),
-          // Rating field here
-          RatingBar.builder(
-            initialRating: 3,
-            minRating: 1,
-            direction: Axis.horizontal,
-            allowHalfRating: true,
-            itemCount: 5,
-            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-            itemBuilder: (context, _) => Icon(
-              Icons.star,
-              color: Colors.amber,
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Text(
+              _feelings[_feelsStep],
+              style: const TextStyle(
+                color: Colors.white54,
+                fontSize: 50,
+              ),
             ),
-            onRatingUpdate: (rating) {
-              print(rating);
-            },
           ),
-
-          const SizedBox(height: 20.0),
-          _currentStep < 4
-              ? ElevatedButton(
-                  onPressed: _nextStep,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    textStyle: const TextStyle(color: Colors.black),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40.0, vertical: 15.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  child: const Text(
-                    'Next',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                )
-              : SizedBox(),
+          Positioned(
+            top: 40,
+            child: Image.asset(
+              _emojis[_feelsStep],
+              width: 60,
+              height: 60,
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20, top: 120),
+            height: 10,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5)),
+            child: Slider(
+              value: _feelsStep.toDouble(),
+              min: 0,
+              max: 4,
+              divisions: 4,
+              activeColor: Colors.transparent,
+              onChanged: (value) {
+                _updateFeedback(value); // Update the slider value
+              },
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                height: 40,
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(_texts[_feelsStep]),
+                    _currentStep < 4
+                        ? GestureDetector(
+                            onTap: _nextStep,
+                            child: Container(
+                              width: 100,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  color: Colors.greenAccent.withOpacity(0.7),
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Center(
+                                  child: Text(
+                                'Next',
+                                style: TextStyle(color: Colors.white),
+                              )),
+                            ))
+                        : const SizedBox(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
