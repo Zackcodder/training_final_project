@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/splashscreen.png'),
+            image: AssetImage('assets/images/splashscreen.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       const CircleAvatar(
                                         radius: 30,
                                         backgroundImage:
-                                            AssetImage('assets/hotdeal1.png'),
+                                            AssetImage('assets/images/hotdeal1.png'),
                                       ),
                                       const SizedBox(
                                         width: 10,
@@ -314,7 +314,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     const CircleAvatar(
                                       radius: 30,
                                       backgroundImage:
-                                          AssetImage('assets/hotdeal1.png'),
+                                          AssetImage('assets/images/hotdeal1.png'),
                                     ),
                                     const Column(
                                       crossAxisAlignment:
@@ -720,7 +720,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             borderRadius: BorderRadius.circular(10),
             //             color: Colors.pink.withOpacity(0.7),
             //             image: const DecorationImage(
-            //                 image: AssetImage('assets/vdtlogo.png'))),
+            //                 image: AssetImage('assets/images/vdtlogo.png'))),
             //       ),
             //       Container(
             //         decoration: BoxDecoration(
@@ -728,7 +728,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             color: Colors.pink.withOpacity(0.7),
             //             image: const DecorationImage(
             //                 fit: BoxFit.fill,
-            //                 image: AssetImage('assets/slide1.png'))),
+            //                 image: AssetImage('assets/images/slide1.png'))),
             //       ),
             //       Container(
             //         decoration: BoxDecoration(
@@ -736,7 +736,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             color: Colors.pink,
             //             image: const DecorationImage(
             //                 fit: BoxFit.fill,
-            //                 image: AssetImage('assets/slide2.png'))),
+            //                 image: AssetImage('assets/images/slide2.png'))),
             //       ),
             //       Container(
             //         decoration: BoxDecoration(
@@ -744,7 +744,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             color: Colors.pink,
             //             image: const DecorationImage(
             //                 fit: BoxFit.fill,
-            //                 image: AssetImage('assets/slide3.png'))),
+            //                 image: AssetImage('assets/images/slide3.png'))),
             //       ),
             //       Container(
             //         decoration: BoxDecoration(
@@ -752,7 +752,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             color: Colors.pink,
             //             image: const DecorationImage(
             //                 fit: BoxFit.fill,
-            //                 image: AssetImage('assets/slide4.png'))),
+            //                 image: AssetImage('assets/images/slide4.png'))),
             //       ),
             //       Container(
             //         decoration: BoxDecoration(
@@ -760,7 +760,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //             color: Colors.pink,
             //             image: const DecorationImage(
             //                 fit: BoxFit.fill,
-            //                 image: AssetImage('assets/slide5.png'))),
+            //                 image: AssetImage('assets/images/slide5.png'))),
             //       ),
             //     ],
             //   ),
@@ -828,7 +828,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             child: const CircleAvatar(
                               radius: 25,
                               backgroundImage:
-                                  AssetImage('assets/yelloWin.png'),
+                                  AssetImage('assets/images/images/yelloWin.png'),
                             ),
                           ),
                           const Text('Vdt',
@@ -845,7 +845,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/rida.jpeg'),
+                            backgroundImage: AssetImage('assets/images/rida.jpeg'),
                           ),
                           Text('rida',
                               style:
@@ -861,7 +861,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/alend.jpeg'),
+                            backgroundImage: AssetImage('assets/images/alend.jpeg'),
                           ),
                           Text('Alend Loan',
                               style:
@@ -876,7 +876,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/providus.png'),
+                            backgroundImage: AssetImage('assets/images/providus.png'),
                           ),
                           Text('Providus',
                               style:
@@ -896,7 +896,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/dodo.png'),
+                            backgroundImage: AssetImage('assets/images/dodo.png'),
                           ),
                           Text('Dodo \nPizza',
                               style:
@@ -911,7 +911,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/jumia.png'),
+                            backgroundImage: AssetImage('assets/images/jumia.png'),
                           ),
                           Text('Jumia',
                               style:
@@ -926,7 +926,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/buypower.png'),
+                            backgroundImage: AssetImage('assets/images/buypower.png'),
                           ),
                           Text('Buy Power',
                               style:
@@ -941,7 +941,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/ayoba.jpeg'),
+                            backgroundImage: AssetImage('assets/images/ayoba.jpeg'),
                           ),
                           Text('Ayoba',
                               style:
@@ -961,7 +961,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/super.jpeg'),
+                            backgroundImage: AssetImage('assets/images/super.jpeg'),
                           ),
                           Text('Super \nSport',
                               style:
@@ -977,7 +977,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           CircleAvatar(
                             radius: 25,
                             backgroundImage:
-                                AssetImage('assets/apple music.jpeg'),
+                                AssetImage('assets/images/apple music.jpeg'),
                           ),
                           Text('Apple \nMusic',
                               style:
@@ -993,7 +993,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           CircleAvatar(
                             radius: 25,
                             backgroundImage:
-                                AssetImage('assets/travelstart.png'),
+                                AssetImage('assets/images/travelstart.png'),
                           ),
                           Text('Travel \n Start',
                               style:
@@ -1008,7 +1008,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           // this container is for image
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage('assets/mano.png'),
+                            backgroundImage: AssetImage('assets/images/mano.png'),
                           ),
                           Text('Mano',
                               style:
@@ -1061,7 +1061,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             //                 child:  CircleAvatar(
             //                     backgroundColor: kcLightPink,
             //                     radius: 15,
-            //                     child: Image.asset('assets/vdtlogo.png')
+            //                     child: Image.asset('assets/images/vdtlogo.png')
             //                 ),
             //               ),
             //               const Column(
