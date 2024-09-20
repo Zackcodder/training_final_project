@@ -3,6 +3,7 @@ import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:training_final_project/screens/help/transaction_history_screen.dart";
 import "package:training_final_project/screens/more/manageNumbersPage.dart";
 import "package:training_final_project/screens/more/manageSubpage.dart";
+import "package:training_final_project/screens/more/subscription_details.dart";
 import "package:training_final_project/screens/more/usageHistoryPage.dart";
 
 class MoreScreen extends StatefulWidget {
@@ -296,7 +297,14 @@ class _MoreScreenState extends State<MoreScreen> {
                           IconButton(
                             icon: const Icon(Icons.chevron_right),
                             color: Colors.grey,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SubscriptionDetails()),
+                                );
+                            },
                           ),
                         ],
                       ),
