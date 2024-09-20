@@ -37,7 +37,7 @@ class _BorrowScreenState extends State<BorrowScreen>  with TickerProviderStateMi
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         title: const Text(
-          'VDT Talk',
+          'Xtra Talk',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,

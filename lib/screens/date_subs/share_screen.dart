@@ -12,7 +12,7 @@ class ShareScreen extends StatelessWidget {
         backgroundColor: Colors.grey,
         centerTitle: true,
         title: const Text(
-          'VDT Share',
+          'MTN Share',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
@@ -137,7 +137,7 @@ class ShareScreen extends StatelessWidget {
                       ),
                       Text(
                         textAlign: TextAlign.justify,
-                        '* VDT Sme DataShare is a prepaid \nservice that allows business owner \nto buy data bundle and share with \nthier staff. This service is specifically \ndesigned for drowing businesses \n offering them the ability to centrally \nmanage internet usegae per staff accross \nthier businesses',
+                        '* MTN Sme DataShare is a prepaid \nservice that allows business owner \nto buy data bundle and share with \nthier staff. This service is specifically \ndesigned for drowing businesses \n offering them the ability to centrally \nmanage internet usegae per staff accross \nthier businesses',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
