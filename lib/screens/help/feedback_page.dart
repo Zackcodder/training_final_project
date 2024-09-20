@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:training_final_project/screens/help/help_screen.dart';
 
 class FeedbackPage extends StatefulWidget {
