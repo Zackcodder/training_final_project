@@ -36,7 +36,7 @@ class ViewPlanDetails extends StatelessWidget {
                 const SizedBox(
                   width: 150,
                 ),
-      
+
                 ///cancle button and logo
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -70,12 +70,13 @@ class ViewPlanDetails extends StatelessWidget {
               ],
             ),
           ),
-      
+
           ///body of screen
           Container(
             decoration: BoxDecoration(
               color: Colors.grey[900],
-              borderRadius: const BorderRadius.only(topLeft: Radius.circular(30)),
+              borderRadius:
+                  const BorderRadius.only(topLeft: Radius.circular(30)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +112,7 @@ class ViewPlanDetails extends StatelessWidget {
                                   color: Colors.grey[600], fontSize: 13)),
                         ],
                       ),
-                
+
                       ///mtn logo, text and icon
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -122,24 +123,23 @@ class ViewPlanDetails extends StatelessWidget {
                             height: 25,
                             margin: const EdgeInsets.only(right: 5),
                             decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Colors.white, width: 2),
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
                                 borderRadius: BorderRadius.circular(60)),
                             child: const Center(
                                 child: Text(
-                              'VDT',
+                              'MTN',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold),
                             )),
                           ),
-                
+
                           // xtra special
                           const Text(
                             'Xtra special',
-                            style: TextStyle(
-                                color: Colors.amber, fontSize: 14),
+                            style: TextStyle(color: Colors.amber, fontSize: 14),
                           ),
                           //chevron icon
                           IconButton(
@@ -178,7 +178,7 @@ class ViewPlanDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-              //divider
+                //divider
                 const Divider(
                   thickness: 1,
                   color: Colors.grey,
@@ -195,7 +195,7 @@ class ViewPlanDetails extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    //data balance
+                      //data balance
                       const Row(
                         children: [
                           Icon(
@@ -213,7 +213,7 @@ class ViewPlanDetails extends StatelessWidget {
                           )
                         ],
                       ),
-                //4.4gb left
+                      //4.4gb left
                       Container(
                         margin: const EdgeInsets.only(left: 30),
                         child: const Text(
@@ -240,7 +240,7 @@ class ViewPlanDetails extends StatelessWidget {
                     ),
                   ],
                 ),
-                 //5gb xtraspecail
+                //5gb xtraspecail
                 Container(
                   padding: const EdgeInsets.all(10),
                   margin: const EdgeInsets.only(
@@ -275,17 +275,16 @@ class ViewPlanDetails extends StatelessWidget {
                       ),
                       const Text('04 Sep 2024',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold))
+                              color: Colors.white, fontWeight: FontWeight.bold))
                     ],
                   ),
                 ),
-                  //divder
+                //divder
                 const Divider(
                   thickness: 1,
                   color: Colors.grey,
                 ),
-                    // you can also
+                // you can also
                 Container(
                   margin: const EdgeInsets.only(top: 5, left: 10),
                   child: const Text(
@@ -293,7 +292,7 @@ class ViewPlanDetails extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                  //buy bundle/and other role
+                //buy bundle/and other role
                 Container(
                   margin: const EdgeInsets.symmetric(
                     horizontal: 30,
@@ -301,7 +300,7 @@ class ViewPlanDetails extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                // buy bundle
+                      // buy bundle
                       Column(
                         children: [
                           Container(
@@ -319,7 +318,7 @@ class ViewPlanDetails extends StatelessWidget {
                                   color: Colors.grey[600], fontSize: 13))
                         ],
                       ),
-                // transaction history
+                      // transaction history
                       Column(
                         children: [
                           Container(
@@ -334,14 +333,13 @@ class ViewPlanDetails extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            textAlign: TextAlign.center,
-                            'Transaction \nhistory',
+                              textAlign: TextAlign.center,
+                              'Transaction \nhistory',
                               style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 13))
+                                  color: Colors.grey[600], fontSize: 13))
                         ],
                       ),
-                //share data
+                      //share data
                       Column(
                         children: [
                           Container(
@@ -359,7 +357,7 @@ class ViewPlanDetails extends StatelessWidget {
                                   color: Colors.grey[600], fontSize: 13))
                         ],
                       ),
-                //borrow
+                      //borrow
                       Column(
                         children: [
                           Container(
@@ -380,7 +378,7 @@ class ViewPlanDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-                  //manage sub
+                //manage sub
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
@@ -399,11 +397,10 @@ class ViewPlanDetails extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            textAlign: TextAlign.center,
-                            'Manage \nsubsription',
+                              textAlign: TextAlign.center,
+                              'Manage \nsubsription',
                               style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 13))
+                                  color: Colors.grey[600], fontSize: 13))
                         ],
                       ),
                     ],

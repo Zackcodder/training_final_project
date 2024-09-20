@@ -27,7 +27,7 @@ class ReferAndEarnScreen extends StatelessWidget {
             height:250,
                     decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/enterprise.png'),
+                image: AssetImage('assets/images/enterprise.png'),
                 fit: BoxFit.cover)),
                   ),
           const Text(
