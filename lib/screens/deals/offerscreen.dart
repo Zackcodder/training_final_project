@@ -466,7 +466,7 @@ class _OfferscreenState extends State<Offerscreen> {
                               ],
                             ),
                             Image.asset(
-                              'assets/egg.png',
+                              'assets/images/egg.png',
                               width: 130, // Set image width
                               height: 100,
                             ),
@@ -525,7 +525,7 @@ class _OfferscreenState extends State<Offerscreen> {
                             ),
                             const SizedBox(width: 10),
                             Image.asset(
-                              'assets/egg.png',
+                              'assets/images/egg.png',
                               width: 150, // Set image width
                               height: 100, 
                             ),
