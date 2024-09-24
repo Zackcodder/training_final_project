@@ -59,7 +59,7 @@ class Playscreen extends StatelessWidget {
                   children: [
                     Text(
                       'Exclusive offers & subscriptions',
-                      style: TextStyle(color: Colors.white, fontSize: 15),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
@@ -88,65 +88,802 @@ class Playscreen extends StatelessWidget {
                   children: [
                     //offer 1
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 10, bottom: 10),
-                        width: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Image.asset('assets/images/imageforplay.jpg', fit: BoxFit.cover,),
-                      ),
-                      Text(
-                        'Offer 1',
-                        style: TextStyle(color: Colors.white,fontSize: 15),
-                      )
-                    ]),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 10, bottom: 10),
+                            width: 180,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Image.asset(
+                              'assets/images/imageforplay.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Text(
+                            'Offer 1',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          )
+                        ]),
                     //offer 2
-                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 10, bottom: 10),
-                        width: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Image.asset('assets/images/imageforplay.jpg'),
-                      ),
-                      Text(
-                        'Offer 2',
-                        style: TextStyle(color: Colors.white,fontSize: 15),
-                      )
-                    ]),
+                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 10, bottom: 10),
+                            width: 180,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child:
+                                Image.asset('assets/images/imageforplay.jpg'),
+                          ),
+                          Text(
+                            'Offer 2',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          )
+                        ]),
                   ],
+                ),
+                //What's new
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'What\'s new?',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            //item 1
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Kids TV Videos',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 2
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Audiomack',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 3
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'MTN Skils \n academy plus',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 4
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'PlayZone',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 5
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Sports world \n TV ',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                //Music
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Music',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            //item 1
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Kids TV Videos',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 2
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Audiomack',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 3
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'MTN Skils \n academy plus',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 4
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'PlayZone',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 5
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Sports world \n TV ',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                //Videos
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Videos',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            //item 1
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Kids TV Videos',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 2
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Audiomack',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 3
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'MTN Skils \n academy plus',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 4
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'PlayZone',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 5
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Sports world \n TV ',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                //Games
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Games',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            //item 1
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Kids TV Videos',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 2
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Audiomack',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 3
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'MTN Skils \n academy plus',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 4
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'PlayZone',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 5
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Sports world \n TV ',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                //Lifestyle
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Lifestyle',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            //item 1
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Kids TV Videos',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 2
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Audiomack',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 3
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'MTN Skils \n academy plus',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 4
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'PlayZone',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                            //item 5
+                            Container(
+                              margin: EdgeInsets.only(right: 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    width: 120,
+                                    height: 160,
+                                    child: Image.asset(
+                                      'assets/images/imageforplay2.jpg',
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Sports world \n TV ',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+                //Explore channels
+                Container(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Explore Channels',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 200,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey
+                            ),
+                            child: Image.asset('assets/images/audiomack.jpg'),
+                          )
+                        ],
+                      ),),
+
+                    ],
+                  ),
                 )
               ],
             ),
           ),
-
-          //What's new
-          Container(
-            child: Column(
-              children: [
-                Text('What\'s new?'),
-                ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    //item 1
-                    Column(
-                      children: [
-                        Container(
-                          child: Image.asset('name'),
-                        )
-                      ],
-                    )
-                  ],
-                )
-              ],
-            ),
-          )
         ],
       ),
     );
