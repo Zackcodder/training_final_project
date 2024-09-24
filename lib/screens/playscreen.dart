@@ -84,16 +84,63 @@ class Playscreen extends StatelessWidget {
                   ),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    //offer 1
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 10, bottom: 10),
+                        width: 180,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Image.asset('assets/images/imageforplay.jpg', fit: BoxFit.cover,),
+                      ),
+                      Text(
+                        'Offer 1',
+                        style: TextStyle(color: Colors.white,fontSize: 15),
+                      )
+                    ]),
+                    //offer 2
+                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 10, bottom: 10),
+                        width: 180,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Image.asset('assets/images/imageforplay.jpg'),
+                      ),
+                      Text(
+                        'Offer 2',
+                        style: TextStyle(color: Colors.white,fontSize: 15),
+                      )
+                    ]),
+                  ],
+                )
+              ],
+            ),
+          ),
+
+          //What's new
+          Container(
+            child: Column(
+              children: [
+                Text('What\'s new?'),
+                ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    //item 1
                     Column(
                       children: [
                         Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Image.asset('assets/image/imageforplay.jpg'),
+                          child: Image.asset('name'),
                         )
-                      ]
+                      ],
                     )
                   ],
                 )
