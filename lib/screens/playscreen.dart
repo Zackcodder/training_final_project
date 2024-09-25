@@ -855,7 +855,7 @@ class Playscreen extends StatelessWidget {
                         children: [
                           Text(
                             'Explore Channels',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           Icon(
                             Icons.arrow_forward_ios,
@@ -864,18 +864,31 @@ class Playscreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 200,
+                        height: 100,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  child: Image.asset(
-                                    'assets/images/audiomack.png',
-                                    fit: BoxFit.contain,
-                                  ),
+                                Column(
+                                  children: [
+                                    Container(
+                                      height: 50,
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.grey,
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/audiomack.png'),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                               Text('Audiomack',style: TextStyle(color: Colors.white))     
+                                  ],
                                 ),
+                                
                               ],
                             )
                           ],
