@@ -888,6 +888,25 @@ class Playscreen extends StatelessWidget {
                                Text('Audiomack',style: TextStyle(color: Colors.white))     
                                   ],
                                 ),
+                                //apple
+                                  Column(
+                                  children: [
+                                    Container(
+                                      height: 50,
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.grey,
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/audiomack.png'),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                               Text('Apple\nMusic',style: TextStyle(color: Colors.white))     
+                                  ],
+                                ),
                                 
                               ],
                             )
