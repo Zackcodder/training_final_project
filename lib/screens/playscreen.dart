@@ -863,21 +863,24 @@ class Playscreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 200,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.grey
-                            ),
-                            child: Image.asset('assets/images/audiomack.jpg'),
-                          )
-                        ],
-                      ),),
-
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  child: Image.asset(
+                                    'assets/images/audiomack.png',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 )
