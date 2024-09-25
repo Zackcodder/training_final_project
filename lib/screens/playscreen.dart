@@ -899,7 +899,7 @@ class Playscreen extends StatelessWidget {
                                         color: Colors.grey,
                                         image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/images/audiomack.png'),
+                                              'assets/images/applemusic.jpg'),
                                           fit: BoxFit.cover,
                                         ),
                                       ),
