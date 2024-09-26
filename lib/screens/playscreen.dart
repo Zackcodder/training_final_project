@@ -1,8 +1,63 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Playscreen extends StatelessWidget {
+class Playscreen extends StatefulWidget {
   const Playscreen({super.key});
 
+  @override
+  State<Playscreen> createState() => _PlayscreenState();
+}
+
+class _PlayscreenState extends State<Playscreen> {
+    int _current = 0;
+  final CarouselSliderController _controller = CarouselSliderController();
+  var imgList = [
+    Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('assets/images/background1.jpg'),
+            fit: BoxFit.fill,
+          ),
+          borderRadius: BorderRadius.circular(20),
+          ),
+      width: 500,
+      height: 300,
+    ),
+    Container(
+      decoration: BoxDecoration(
+        image: const DecorationImage(
+          image: AssetImage('assets/images/background1.jpg'),
+          fit: BoxFit.fill,
+        ),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      width: 500,
+      height: 300,
+    ),
+    Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('assets/images/background1.jpg'),
+            fit: BoxFit.fill,
+          ),
+          borderRadius: BorderRadius.circular(20),
+          ),
+      width: 500,
+      height: 300,
+    ),
+    Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('assets/images/background1.jpg'),
+            fit: BoxFit.fill,
+          ),
+          borderRadius: BorderRadius.circular(20),
+          ),
+      width: 500,
+      height: 300,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,6 +70,7 @@ class Playscreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
+         
           ///Title row
           Container(
             padding: EdgeInsets.all(8),
@@ -49,6 +105,52 @@ class Playscreen extends StatelessWidget {
               ],
             ),
           ),
+           //slider
+          Container(
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.black)),
+          child: CarouselSlider(
+            options: CarouselOptions(
+                aspectRatio: 2.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
+
+            items: imgList,
+            // items: imageSliders,
+            carouselController: _controller,
+            // [
+            //   Image.asset('assets/images/flower1.jpg'),
+            //   Image.asset('assets/images/ocean1.jpg'),
+            //   Image.asset('assets/images/sky1.jpg'),
+            //   Image.asset('assets/images/sunset1.jpg'),
+
+            // ],
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: imgList.asMap().entries.map((entry) {
+            return GestureDetector(
+              onTap: () => _controller.animateToPage(entry.key),
+              child: Container(
+                width: 12.0,
+                height: 12.0,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: (Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.white)
+                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+              ),
+            );
+          }).toList(),
+        ),
+         
           //offers
           Container(
             padding: EdgeInsets.all(8),
@@ -864,8 +966,9 @@ class Playscreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 100,
+                        height: 150,
                         child: ListView(
+                          padding: EdgeInsets.all(10),
                           scrollDirection: Axis.horizontal,
                           children: [
                             Row(
@@ -873,8 +976,8 @@ class Playscreen extends StatelessWidget {
                                 Column(
                                   children: [
                                     Container(
-                                      height: 50,
-                                      width: 50,
+                                      height: 60,
+                                      width: 60,
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Colors.grey,
@@ -885,37 +988,260 @@ class Playscreen extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                               Text('Audiomack',style: TextStyle(color: Colors.white))     
+                                    Text('Audiomack',
+                                        style: TextStyle(color: Colors.white))
                                   ],
                                 ),
+                                SizedBox(
+                                  width: 10,
+                                ),
                                 //apple
-                                  Column(
+                                Column(
                                   children: [
                                     Container(
-                                      height: 50,
-                                      width: 50,
+                                      height: 60,
+                                      width: 60,
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Colors.grey,
                                         image: DecorationImage(
                                           image: AssetImage(
                                               'assets/images/applemusic.jpg'),
-                                          fit: BoxFit.cover,
+                                          fit: BoxFit.fill,
                                         ),
                                       ),
                                     ),
-                               Text('Apple\nMusic',style: TextStyle(color: Colors.white))     
+                                    Text('Apple\nMusic',
+                                        style: TextStyle(color: Colors.white))
                                   ],
                                 ),
-                                
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ),
                     ],
                   ),
-                )
+                ),
+                //footer
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Stay up to date with instant\nnotifications.',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      Text(
+                        'Receive purchase alerts, new product arrivals,\nand exclusive offers and deals.\nSign up emails',
+                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      ),
+                      Container(
+                        height: 50.0,
+                        child: TextField(
+                          onChanged: ((value) {}),
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.only(top: 2),
+                            hintText: 'xyz@gmail.com',
+                            hintStyle: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        height: 2,
+                      ),
+                      //item
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Shop',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        height: 2,
+                      ),
+                      //item
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Business Solution',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        height: 2,
+                      ),
+                      //item
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Legal',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        height: 2,
+                      ),
+                      //item
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Help',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        height: 2,
+                      ),
+                      //item
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'MTN Nigeria',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                      Center(
+                        child: Container(
+                          margin: const EdgeInsets.only(top: 20, bottom: 20),
+                          child: Column(
+                            children: [
+                              // Image.asset(
+                              //   'assets/mtnlogo.png',
+                              //   color: Colors.white,
+                              //   width: 100,
+                              //   height: 100,
+                              // ),
+                              const Text(
+                                '©2022 MTN Nigeria Communications PLC, All rights \nreserved. Privacy Policy & Data Protection',
+                                style: TextStyle(color: Colors.grey),
+                                textAlign: TextAlign.center,
+                              ),
+
+                              ///socials icons
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    //facebook
+                                    Container(
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.yellow),
+                                      child: Icon(FontAwesomeIcons.facebookF),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    //twitter
+                                    Container(
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.yellow),
+                                      child: Icon(FontAwesomeIcons.twitter),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    //instagram
+                                    Container(
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.yellow),
+                                      child: Icon(FontAwesomeIcons.instagram),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    //linkedin
+                                    Container(
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.yellow),
+                                      child: Icon(FontAwesomeIcons.linkedinIn),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    //youtube
+                                    Container(
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.yellow),
+                                      child: Icon(FontAwesomeIcons.youtube),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
