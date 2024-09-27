@@ -3,6 +3,7 @@ import 'package:training_final_project/screens/help/help_screen.dart';
 import 'package:training_final_project/screens/home_screen.dart';
 import 'package:training_final_project/screens/more/more_screen.dart';
 import 'package:training_final_project/screens/date_subs/recharge_screen.dart';
+import 'package:training_final_project/screens/playscreen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -16,7 +17,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    const Recharge(),
+    const Playscreen(),
     const HelpScreen(),
     const MoreScreen(),
   ];

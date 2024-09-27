@@ -93,7 +93,7 @@ class _FeedbackPageState extends State<FeedbackPage>
               animation: _animationController,
               builder: (context, child) {
                 return LinearProgressIndicator(
-                  value: _animationController.value * (_currentStep) / 4,
+                  value: _animationController.value * (_currentStep) / 3,
                   backgroundColor: Colors.grey.shade700,
                   valueColor: const AlwaysStoppedAnimation<Color>(Colors.pink),
                 );
@@ -339,7 +339,8 @@ class _FeedbackPageState extends State<FeedbackPage>
             margin: const EdgeInsets.only(left: 20, right: 20, top: 120),
             height: 10,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5)),
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.grey),
             child: Slider(
               value: _feelsStep.toDouble(),
               min: 0,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:training_final_project/screens/help/contact_screen.dart';
 import 'package:training_final_project/screens/help/faqscreen.dart';
 import 'package:training_final_project/screens/help/feedback_page.dart';
+import 'package:training_final_project/screens/help/foundations_screen.dart';
 import 'package:training_final_project/screens/help/tips_screen.dart';
 import 'package:training_final_project/screens/help/track_complaint_screen.dart';
 import 'package:training_final_project/screens/help/transaction_history_screen.dart';
@@ -232,31 +233,39 @@ class HelpScreen extends StatelessWidget {
                   ),
                 ),
                 //foundation
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.handshake,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'MTN Foundation',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            'View projects and activities',
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FoundationsScreen()));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.handshake,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'MTN Foundation',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'View projects and activities',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //feedback
