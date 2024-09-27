@@ -23,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late Animation<double> _animation2;
   late Animation<double> _animation3;
   late Animation<double> _animation4;
-  late AnimationController _buyAnimationController;
   int selectedIndex = 0;
 
   final List<String> items = ['HOT', 'MTN', 'FUN'];
@@ -66,7 +65,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    _buyAnimationController.dispose();
     _animationController.dispose();
     super.dispose();
   }
